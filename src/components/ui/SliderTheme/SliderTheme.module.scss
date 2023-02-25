@@ -1,0 +1,180 @@
+@import "../../../styles/variables.scss";
+
+.container {
+  .swiperCard {
+    height: 500px;
+
+    >div > div {
+      display: flex;
+      flex-direction: column;
+      row-gap: 20px;
+      color: black;
+      height: 500px;
+      border-radius: 10px;
+      background-color: $beige;
+      padding: 20px;
+
+      .containerPoster {
+        min-height: 225px;
+
+        @media (max-width: 1350px) {
+          min-height: 210px;
+        }
+
+        @media (max-width: 1250px) {
+          min-height: 190px;
+        }
+
+        @media (max-width: 1150px) {
+          min-height: 170px;
+        }
+
+        @media (max-width: 1050px) {
+          min-height: 152px;
+        }
+
+        @media (max-width: 950px) {
+          min-height: 188px;
+        }
+
+        @media (max-width: 800px) {
+          min-height: 145px;
+        }
+
+        @media (max-width: 600px) {
+          min-height: 220px;
+        }
+
+        @media (max-width: $mobileOnlyWidth) {
+          min-height: 175px;
+        }
+      }
+
+      .img {
+        border-radius: 10px;
+        width: 100%;
+      }
+
+      .videos {
+        border-radius: 10px;
+        width: 100%;
+      }
+
+      .displayNoneImg {
+        display: none;
+      }
+
+      .title {
+        margin: 0;
+      }
+
+      .btnContainer {
+        margin-top: auto;
+
+        .btn {
+          width: 100%;
+          height: 60px;
+          font-size: 26px;
+
+          @media (max-width: 1200px) {
+            font-size: 24px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.desktopContainer {
+  @media (max-width: $tabletWidth) {
+    display: none;
+  }
+
+  .swiperCard {
+    >div > div {
+      .title {
+        font-size: 26px;
+
+        @media (max-width: 1200px) {
+          font-size: 24px;
+        }
+
+        @media (max-width: 1050px) {
+          font-size: 22px;
+        }
+      }
+
+      .description {
+        font-size: 22px;
+        margin: 0;
+        max-height: 150px;
+
+        @media (max-width: 1200px) {
+          font-size: 20px;
+        }
+
+        @media (max-width: 1150px) {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}
+
+.tabletContainer {
+  display: none;
+
+  @media (max-width: $tabletWidth) {
+    display: block;
+  }
+
+  @media (max-width: 600px) {
+    display: none;
+  }
+
+  .swiperCard {
+    >div > div {
+      .title {
+        margin: 0;
+        font-size: 24px;
+      }
+
+      .description {
+        font-size: 20px;
+        margin: 0;
+        max-height: 150px;
+
+        @media (max-width: 800px) {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}
+
+.mobileContainer {
+  display: none;
+
+  @media (max-width: 600px) {
+    display: block;
+  }
+
+  .swiperCard {
+    >div > div {
+      .title {
+        margin: 0;
+        font-size: 24px;
+      }
+
+      .description {
+        font-size: 20px;
+        margin: 0;
+        max-height: 150px;
+
+        @media (max-width: 800px) {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}

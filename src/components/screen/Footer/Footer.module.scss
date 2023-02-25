@@ -1,0 +1,112 @@
+@import "../../../styles/variables.scss";
+
+.container {
+  width: 100%;
+  padding: 40px;
+
+  @media (max-width: 650px) {
+    width: 650px;
+  }
+
+  @media (max-width: 600px) {
+    width: 100%;
+  }
+
+  @media (max-width: 460px) {
+    width: 460px;
+  }
+
+  @media (max-width: $mobileOnlyWidth) {
+    width: 100%;
+    padding: 20px;
+  }
+
+  @media (max-width: 380px) {
+    width: 380px;
+  }
+}
+
+.containerWhite {
+  background-color: $beige;
+  color: black;
+}
+
+.containerBlack {
+  background-color: $black;
+  color: white;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+
+  @media (min-width: $mobileOnlyWidth) {
+    width: 380px;
+  }
+
+  @media (min-width: $tabletWidth) {
+    width: 481px;
+  }
+
+  @media (max-width: 800px) {
+    flex-direction: column;
+    margin: 0 auto;
+    row-gap: 10px;
+  }
+
+  >h2 {
+    margin: 0;
+    margin-right: 20px;
+    font-size: 32px;
+
+    @media (max-width: $mobileOnlyWidth) {
+      font-size: 28px;
+    }
+
+    @media (max-width: 800px) {
+      margin: 0;
+      font-size: 36px;
+    }
+
+    @media (min-width: $tabletWidth) {
+      font-size: 40px;
+    }
+  }
+}
+
+.containerLink {
+  display: flex;
+  align-items: center;
+}
+
+.iconLink {
+  width: 55px;
+  height: 55px;
+  padding: 5px;
+
+  @media (min-width: $tabletWidth) {
+    width: 74px;
+    height: 74px;
+  }
+
+  @media (max-width: 800px) {
+    width: 85px;
+    height: 85px;
+  }
+
+  >img {
+    width: 45px;
+    height: 45px;
+
+    @media (min-width: $tabletWidth) {
+      width: 64px;
+      height: 64px;
+    }
+
+    @media (max-width: 800px) {
+      width: 75px;
+      height: 75px;
+    }
+  }
+}

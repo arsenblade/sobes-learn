@@ -1,0 +1,45 @@
+@import "../../../styles/variables.scss";
+
+.admin {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 168px);
+
+  @media (max-width: 1440px) {
+    min-height: calc(100vh - 145px);
+  }
+
+  @media (max-width: $tabletWidth) {
+    padding-top: 120px;
+    min-height: 100vh;
+  }
+
+  .adminContent {
+    width: 100%;
+    border-top: 6px solid $black;
+
+    @media (max-width: 650px) {
+      width: 650px;
+    }
+
+    @media (max-width: 600px) {
+      width: 100%;
+    }
+
+    @media (max-width: 460px) {
+      width: 460px;
+    }
+
+    @media (max-width: $mobileOnlyWidth) {
+      width: 100%;
+    }
+
+    @media (max-width: 380px) {
+      width: 380px;
+    }
+  }
+
+  .footer {
+    flex: auto;
+  }
+}

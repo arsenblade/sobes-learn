@@ -1,0 +1,266 @@
+@import "./variables.scss";
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: TT-norms-pro, sans-serif;
+  height: 100vh;
+  background-color: $blackBackground;
+}
+
+.app {
+  height: max-content;
+  min-height: 100vh;
+}
+
+.error404 {
+  display: flex;
+  justify-content: center;
+  color: rgba($color: white, $alpha: 80%);
+  font-size: 100px;
+  line-height: 56px;
+  font-weight: 600;
+  margin-left: 40px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.swiper-pagination {
+  bottom: 0 !important;
+  color: $violet;
+}
+
+.swiper-button-prev {
+  color: $pink !important;
+
+  &::after {
+    font-size: 55px !important;
+  }
+}
+
+.swiper-button-next {
+  color: $pink !important;
+
+  &::after {
+    font-size: 55px !important;
+  }
+}
+
+.dropdownListAnimation1-enter-active {
+  animation: show-dropdown-list1 0.3s forwards;
+}
+
+.dropdownListAnimation1-exit-active {
+  animation: exit-dropdown-list1 0.3s forwards;
+}
+
+.dropdownListAnimationAdmin-enter-active {
+  animation: show-dropdown-list3 0.3s forwards;
+}
+
+.dropdownListAnimationAdmin-exit-active {
+  animation: exit-dropdown-list3 0.3s forwards;
+}
+
+.dropdownListAnimationUser-enter-active {
+  animation: show-dropdown-list2 0.3s forwards;
+}
+
+.dropdownListAnimationUser-exit-active {
+  animation: exit-dropdown-list2 0.3s forwards;
+}
+
+@keyframes show-dropdown-list1 {
+  0% {
+    height: 0;
+  }
+
+  100% {
+    height: 58px;
+  }
+}
+
+@keyframes exit-dropdown-list1 {
+  0% {
+    height: 58px;
+  }
+
+  75% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+    height: 0;
+  }
+}
+
+.dropdownListAnimation2-enter-active {
+  animation: show-dropdown-list2 0.3s forwards;
+}
+
+.dropdownListAnimation2-exit-active {
+  animation: exit-dropdown-list2 0.3s forwards;
+}
+
+@keyframes show-dropdown-list2 {
+  0% {
+    height: 0;
+  }
+
+  100% {
+    height: 116px;
+  }
+}
+
+@keyframes exit-dropdown-list2 {
+  0% {
+    height: 116px;
+  }
+
+  75% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+    height: 0;
+  }
+}
+
+.dropdownListAnimation3-enter-active {
+  animation: show-dropdown-list3 0.3s forwards;
+}
+
+.dropdownListAnimation3-exit-active {
+  animation: exit-dropdown-list3 0.3s forwards;
+}
+
+@keyframes show-dropdown-list3 {
+  0% {
+    height: 0;
+  }
+
+  100% {
+    height: 174px;
+  }
+}
+
+@keyframes exit-dropdown-list3 {
+  0% {
+    height: 174px;
+  }
+
+  75% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+    height: 0;
+  }
+}
+
+.test-animation-enter-active {
+  animation: show-dropdown-list4 0.5s forwards;
+}
+
+.test-animation-exit-active {
+  animation: exit-dropdown-list4 0.5s forwards;
+}
+
+@keyframes show-dropdown-list4 {
+  0% {
+    height: 0;
+    padding-bottom: 0;
+  }
+
+  100% {
+    height: 100vh;
+    padding-bottom: 122px;
+  }
+}
+
+@keyframes exit-dropdown-list4 {
+  0% {
+    height: 100vh;
+    opacity: 1;
+  }
+
+  100% {
+    height: 0;
+    padding-bottom: 0;
+  }
+}
+
+.classNameBackAnimation-enter-active {
+  animation: enter-back-animation 0.2s forwards;
+}
+
+.classNameBackAnimation-exit-active {
+  animation: exit-back-animation 0.2s forwards;
+}
+
+@keyframes enter-back-animation {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes exit-back-animation {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+}
+
+.classNameNextAnimation-enter-active {
+  animation: enter-next-animation 0.2s forwards;
+}
+
+.classNameNextAnimation-exit-active {
+  animation: exit-next-animation 0.2s forwards;
+}
+
+@keyframes enter-next-animation {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes exit-next-animation {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+}

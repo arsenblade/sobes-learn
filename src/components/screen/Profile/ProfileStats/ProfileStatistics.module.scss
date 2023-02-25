@@ -1,0 +1,239 @@
+@import "../../../../styles/variables.scss";
+
+.profileStatistics {
+  position: relative;
+  display: flex;
+  margin: 0 auto;
+  column-gap: 30px;
+  padding-left: 40px;
+  padding-right: 40px;
+  max-width: 1440px;
+  color: white;
+
+  @media (max-width: $tabletWidth) {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  @media (max-width: 800px) {
+    width: 640px;
+  }
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+    width: 460px;
+  }
+
+  @media (max-width: $mobileOnlyWidth) {
+    width: 380px;
+    padding: 0 10px;
+  }
+
+  .containerImg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-right: 30px;
+    padding-top: 30px;
+    border-right: 6px solid #000;
+    height: 700px;
+
+    @media (max-width: 1050px) {
+      padding-right: 20px;
+      padding-top: 20px;
+    }
+
+    @media (max-width: 800px) {
+      height: 750px;
+    }
+
+    @media (max-width: 600px) {
+      padding: 0;
+      border: none;
+      height: auto;
+    }
+
+    .img {
+      border-radius: 10px;
+      margin-bottom: 20px;
+
+      @media (max-width: 1050px) {
+        width: 220px;
+        height: 220px;
+      }
+    }
+
+    .title {
+      font-size: 30px;
+      margin: 0;
+      min-height: 38px;
+
+      @media (max-width: 1050px) {
+        font-size: 24px;
+      }
+
+      @media (max-width: 800px) {
+        margin-bottom: 20px;
+      }
+    }
+
+    .containerLink {
+      display: none;
+      margin-top: 10px;
+      column-gap: 40px;
+
+      @media (max-width: 800px) {
+        display: flex;
+        margin: 0 auto;
+      }
+
+      .link {
+        @media (max-width: 800px) {
+          width: 64px;
+          height: 64px;
+          background-color: transparent;
+
+          >span {
+            display: none;
+          }
+        }
+      }
+
+      .statistics {
+        @media (max-width: 800px) {
+          background: url("../../../../assets/img/statistics-icon-white.png");
+        }
+      }
+
+      .settings {
+        @media (max-width: 800px) {
+          background: url("../../../../assets/img/settings-icon-white.png");
+        }
+      }
+
+      .currentActiveStatistics {
+        @media (max-width: 800px) {
+          margin-top: -10px;
+          background: url("../../../../assets/img/statistics-icon-violet.png");
+        }
+      }
+
+      .currentActiveSettings {
+        @media (max-width: 800px) {
+          background: url("../../../../assets/img/settings-icon-violet.png");
+          margin-top: -10px;
+        }
+      }
+    }
+  }
+
+  .userStatistics {
+    padding-top: 60px;
+    width: 60%;
+    padding-right: 20px;
+
+    @media (max-width: 1050px) {
+      padding-top: 40px;
+    }
+
+    @media (max-width: 800px) {
+      margin-right: 20px;
+      width: 56%;
+    }
+
+    @media (max-width: 600px) {
+      width: 100%;
+      padding-right: 0;
+      margin-right: 0;
+    }
+
+    .title {
+      text-align: center;
+      margin-top: 0;
+    }
+
+    .containerStats {
+      display: flex;
+      column-gap: 40px;
+      margin-top: 20px;
+
+      @media (max-width: 800px) {
+        flex-direction: column;
+        row-gap: 20px;
+      }
+
+      .filledTests {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        row-gap: 10px;
+        width: 400px;
+        background-color: $black;
+        border-radius: 10px;
+        padding: 20px;
+
+        @media (max-width: 800px) {
+          width: 100%;
+        }
+
+        >h2 {
+          font-size: 24px;
+          text-align: center;
+          margin: 0;
+
+          @media (max-width: 1050px) {
+            font-size: 18px;
+          }
+        }
+
+        >h3 {
+          color: $violet;
+          font-size: 54px;
+          margin: 0;
+          text-align: center;
+
+          @media (max-width: 1050px) {
+            font-size: 40px;
+          }
+        }
+      }
+
+      .averageScore {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 400px;
+        background-color: $black;
+        row-gap: 10px;
+        border-radius: 10px;
+        padding: 20px;
+
+        @media (max-width: 800px) {
+          width: 100%;
+        }
+
+        >h2 {
+          font-size: 24px;
+          text-align: center;
+          margin: 0;
+
+          @media (max-width: 1050px) {
+            font-size: 18px;
+          }
+        }
+
+        >h3 {
+          color: $violet;
+          font-size: 54px;
+          margin: 0;
+          text-align: center;
+
+          @media (max-width: 1050px) {
+            font-size: 40px;
+          }
+        }
+      }
+    }
+  }
+}

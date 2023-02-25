@@ -1,0 +1,99 @@
+@import "../../../styles/variables.scss";
+
+.btn {
+  font-size: 16px;
+  border-radius: 0.2em;
+  width: 12rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-family: sans-serif;
+  text-align: center;
+  line-height: 3em;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.btnWhite {
+  color: black;
+  background-color: white;
+}
+
+.btnPink {
+  color: white;
+  background-color: $pink;
+}
+
+.btnViolet {
+  color: white;
+  background-color: $violet;
+}
+
+.btn span {
+  position: absolute;
+  width: 25%;
+  height: 100%;
+  transform: translateY(150%);
+  border-radius: 50%;
+  left: calc((var(--n) - 1) * 25%);
+  transition: 0.5s;
+  transition-delay: calc((var(--n) - 1) * 0.04s);
+  z-index: -1;
+}
+
+.btnWhite span {
+  background-color: $pink;
+}
+
+.btnPink span {
+  background-color: $black;
+}
+
+.btnViolet span {
+  background-color: $black;
+}
+
+.noDisabled {
+  &:active {
+    opacity: 0.8;
+  }
+}
+
+.noDisabled:hover {
+  color: white;
+  background-color: transparent;
+}
+
+.disabled {
+  opacity: 0.6;
+}
+
+.btn:hover span {
+  transform: translateY(0) scale(2);
+}
+
+.disabled:hover span {
+  transform: none;
+  display: none;
+}
+
+.spanOne:nth-child(1) {
+  --n: 1;
+}
+
+.spanTwo:nth-child(2) {
+  --n: 2;
+}
+
+.spanThree:nth-child(3) {
+  --n: 3;
+}
+
+.spanFour:nth-child(4) {
+  --n: 4;
+}
