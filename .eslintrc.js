@@ -37,6 +37,7 @@ module.exports = {
     'react/prop-types': 'off',
     'no-param-reassign': 'off',
     'global-require': 'off',
+	'linebreak-style': 'off',
     'react/no-array-index-key': 'off',
     'jsx-a11y/label-has-associated-control': 'off',
     'jsx-a11y/no-static-element-interactions': 'off',

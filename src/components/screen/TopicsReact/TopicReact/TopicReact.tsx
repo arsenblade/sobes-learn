@@ -7,11 +7,13 @@ import styles from './TopicReact.module.scss';
 import { useTopicReact } from './useTopicReact';
 import { MyToast } from '../../../ui/MyToast/MyToast';
 import { useActions } from '../../../../hooks/useActions';
+import CommentsSection from './Comments/CommentsList';
 
 const TopicReact = () => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [isAnimation, setIsAnimation] = useState(false);
   const { id } = useParams();
+  console.log(id);
   const navigate = useNavigate();
   const { createCurrentTest, cleanCurrentQuestion } = useActions();
   const {
@@ -62,43 +64,44 @@ const TopicReact = () => {
   return (
     <div className={styles.topicReact}>
       {!isLoadingAllTopics && !isLoadingCurrentTopic && currentTopic && allTopics && isAnimation
-      && (
-      <div className={cn(styles.loadingAnimation)}>
-        <h1 className={styles.title}>
-          #
-          {currentTopic.numberTopic}
-          {' '}
-          {currentTopic.titleTopic}
-        </h1>
-        <div className={styles.containerPlayer}>
-          {currentTopic
-          && (
-          <ReactPlayer
-            style={{ margin: '0 auto', width: '100%' }}
-            url={videoUrl || ''}
-            playing={isPlaying}
-            playIcon={(
-              // eslint-disable-next-line jsx-a11y/control-has-associated-label
-              <button
-                className={styles.playButton}
-                onClick={() => setIsPlaying(true)}
-              />
-            )}
-            light={imgUrl || ''}
-            controls
-            volume={0.5}
-          />
-          )}
-        </div>
-        {currentTopic && indexCurrentTopic !== undefined && indexCurrentTopic !== -1
         && (
-        <div className={styles.btnContainer}>
-          <Button onClick={() => handleClickBack()} className={cn(styles.btn, styles.btnBack)} color="White" disabled={indexCurrentTopic < 1}>Назад</Button>
-          <Button onClick={() => handleClickTestBtn()} className={cn(styles.btn, styles.btnNext)} color="Pink">Перейти к заданию</Button>
-        </div>
+          <div className={cn(styles.loadingAnimation)}>
+            <h1 className={styles.title}>
+              #
+              {currentTopic.numberTopic}
+              {' '}
+              {currentTopic.titleTopic}
+            </h1>
+            <div className={styles.containerPlayer}>
+              {currentTopic
+                && (
+                  <ReactPlayer
+                    style={{ margin: '0 auto', width: '100%' }}
+                    url={videoUrl || ''}
+                    playing={isPlaying}
+                    playIcon={(
+                      // eslint-disable-next-line jsx-a11y/control-has-associated-label
+                      <button
+                        className={styles.playButton}
+                        onClick={() => setIsPlaying(true)}
+                      />
+                    )}
+                    light={imgUrl || ''}
+                    controls
+                    volume={0.5}
+                  />
+                )}
+            </div>
+            {currentTopic && indexCurrentTopic !== undefined && indexCurrentTopic !== -1
+              && (
+                <div className={styles.btnContainer}>
+                  <Button onClick={() => handleClickBack()} className={cn(styles.btn, styles.btnBack)} color="White" disabled={indexCurrentTopic < 1}>Назад</Button>
+                  <Button onClick={() => handleClickTestBtn()} className={cn(styles.btn, styles.btnNext)} color="Pink">Перейти к заданию</Button>
+                </div>
+              )}
+            <CommentsSection topicId={currentTopic.commentsId} />
+          </div>
         )}
-      </div>
-      )}
     </div>
   );
 };

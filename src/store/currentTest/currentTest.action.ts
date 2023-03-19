@@ -1,9 +1,8 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import { userTest } from '../../service/userTest/userTest.service';
-import { } from '../../types/question.types';
 import { ICurrentTestState } from './currentTest.interface';
 
-export const createCurrentTest = createAsyncThunk<ICurrentTestState, {id: string, currentTopicTitle: string, idTest: string, nextTopicId: string | 'lastTopic'} >('create current test', async ({
+export const createCurrentTest = createAsyncThunk<ICurrentTestState, { id: string, currentTopicTitle: string, idTest: string, nextTopicId: string | 'lastTopic' }>('create current test', async ({
   id, currentTopicTitle, idTest, nextTopicId,
 }, thunkApi) => {
   try {

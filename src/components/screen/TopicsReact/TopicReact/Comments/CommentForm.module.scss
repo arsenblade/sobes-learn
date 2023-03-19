@@ -1,0 +1,54 @@
+.commentForm {
+  align-items: flex-start;
+  width: 100%;
+  height: 150px;
+  display: flex;
+  justify-content: left;
+  margin-top: 20px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #333;
+
+  img {
+    width: 70px;
+    height: 70px;
+    border-radius: 10px;
+  }
+}
+
+.commentFormMainInfo {
+  height: 100%;
+  width: 100%;
+  margin-left: 20px;
+
+  span {
+    padding: 0;
+    margin: 8px 0 0;
+  }
+
+  p {
+    padding: 0;
+    margin: 0;
+    font-size: 10px;
+  }
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.buttonContainer {
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  border: none;
+}
+
+.commentFormInput {
+  min-height: 50px;
+  width: 100%;
+  height: 300px;
+}
+
+.submitButton {
+  margin-top: 15px;
+}

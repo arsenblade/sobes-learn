@@ -6,5 +6,16 @@ export interface ITopic {
   relatedQuestionsId: string;
   passedTopic: boolean;
   descriptionTopic: string;
-  numberTopic: number
+  numberTopic: number;
+  commentsId: string;
+}
+
+export interface IComment {
+  userId: string,
+  id: string,
+  pubDate: string,
+  username: string,
+  commentText: string,
+  replies: IComment[],
+  parentId?: string;
 }
