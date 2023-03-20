@@ -253,15 +253,14 @@
 }
 
 .commentsContainer {
-  width: 1244px;
   margin: 0 auto;
   margin-bottom: 20px;
 
-  h1 {
+  > h1 {
     font-size: 40px;
   }
 
-  hr {
+  > hr {
     margin: 0;
     padding: 0;
     display: block;
@@ -270,6 +269,17 @@
     height: 1px;
     border-top: 4px solid white;
     color: white;
+  }
+
+  .showFormButton {
+    font-size: 30px;
+    height: 60px;
+    width: 400px;
+
+    @media (max-width: 800px) {
+      font-size: 26px;
+      height: 50px;
+    }
   }
 
   @media (max-width: 1350px) {
@@ -283,7 +293,7 @@
   @media (max-width: 1150px) {
     width: 978px;
 
-    h1 {
+    > h1 {
       font-size: 35px;
     }
   }
@@ -299,7 +309,7 @@
   @media (max-width: 800px) {
     width: 600px;
 
-    h1 {
+    > h1 {
       font-size: 30px;
     }
   }
@@ -307,12 +317,16 @@
   @media (max-width: 600px) {
     width: 420px;
 
-    h1 {
+    > h1 {
       font-size: 25px;
+    }
+
+    .showFormButton {
+      width: 100%;
     }
   }
 
   @media (max-width: $mobileOnlyWidth) {
-    width: 360px;
+    width: 360px !important;
   }
 }

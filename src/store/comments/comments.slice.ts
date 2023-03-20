@@ -7,7 +7,7 @@ const initialState: ICommentsState = {
     id: '',
     comments: [],
   },
-  currentFormId: '',
+  currentFormId: 'init',
   isLoading: false,
   error: '',
 };

@@ -13,7 +13,6 @@ const TopicReact = () => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [isAnimation, setIsAnimation] = useState(false);
   const { id } = useParams();
-  console.log(id);
   const navigate = useNavigate();
   const { createCurrentTest, cleanCurrentQuestion } = useActions();
   const {

@@ -591,6 +591,15 @@
           "username": "holaynav",
           "commentText": "Слишком много воды. Структуризируйте и скоратите информацию!",
           "replies": []
+        },
+        {
+          "id": "be378dea-fc93-47d8-86ad-ffb8aca9e83a",
+          "userId": "1",
+          "pubDate": "21-03-2023",
+          "username": "Yen",
+          "commentText": "КАКОЙ КЛАССНЫЙ УРОК. ЭТО ЛУЧШЕЕ ЧТО Я ВИДЕЛ. Я СТАЛ СЕНЬОРОМ ЗА 3 МИНУТЫ. IBM и YANDEX ПЫТАЮТСЯ ПРОБИТЬ МОЮ ЛИЧКУ",
+          "replies": [],
+          "parentId": ""
         }
       ]
     },
@@ -622,6 +631,33 @@
               "parentId": "4dda4514-0df9-5fb6-9291-5f3c3cedf9a1"
             }
           ]
+        },
+        {
+          "id": "6937cba2-c247-4975-85c5-c43d2a6754cd",
+          "userId": "1",
+          "pubDate": "20-03-2023",
+          "username": "Yen",
+          "commentText": "Новый независимый комментарий",
+          "replies": [],
+          "parentId": ""
+        },
+        {
+          "id": "ebfd0ba3-472d-422a-912d-041f5b5ba254",
+          "userId": "1",
+          "pubDate": "20-03-2023",
+          "username": "Yen",
+          "commentText": "Новый независимый комментарий",
+          "replies": [],
+          "parentId": ""
+        },
+        {
+          "id": "7e29588e-3a97-48ed-9012-95a6ce05ca42",
+          "userId": "1",
+          "pubDate": "20-03-2023",
+          "username": "Yen",
+          "commentText": "Классно!",
+          "replies": [],
+          "parentId": ""
         }
       ]
     },

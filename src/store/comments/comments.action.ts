@@ -2,11 +2,11 @@ import { createAsyncThunk } from '@reduxjs/toolkit';
 import { commentsService } from '../../service/comments/comments.service';
 import { IComment } from '../../types/topic.types';
 import { dateToString } from '../../utils/dateToString';
-import { ICommentsStateElement } from './comments.interface';
+import { IAddComment, ICommentsStateElement } from './comments.interface';
 
 const { v4: uuidv4 } = require('uuid');
 
-export const addComment = createAsyncThunk<ICommentsStateElement, { userId: string, username: string, text: string, topicId: string, parentId?: string }>(
+export const addComment = createAsyncThunk<ICommentsStateElement, IAddComment>(
   'add comment',
   async ({
     userId, username, text, topicId, parentId,
@@ -24,20 +24,20 @@ export const addComment = createAsyncThunk<ICommentsStateElement, { userId: stri
       };
       const response = await commentsService.addComment(newComment, topicId);
       return response;
-    } catch (e) {
-      return thunkApi.rejectWithValue(e);
+    } catch (error) {
+      return thunkApi.rejectWithValue(error);
     }
   },
 );
 
-export const getCommentsById = createAsyncThunk<ICommentsStateElement, string>(
+export const getCommentsById = createAsyncThunk<ICommentsStateElement, {topicId: string}>(
   'get comments by id',
-  async (topicId, thunkApi) => {
+  async ({ topicId }, thunkApi) => {
     try {
       const response = await commentsService.getCommentsById(topicId);
       return response.data;
-    } catch (e) {
-      return thunkApi.rejectWithValue(e);
+    } catch (error) {
+      return thunkApi.rejectWithValue(error);
     }
   },
 );
@@ -48,8 +48,8 @@ export const getAllComments = createAsyncThunk<ICommentsStateElement[]>(
     try {
       const response = await commentsService.getAllComments();
       return response.data;
-    } catch (e) {
-      return thunkApi.rejectWithValue(e);
+    } catch (error) {
+      return thunkApi.rejectWithValue(error);
     }
   },
 );
