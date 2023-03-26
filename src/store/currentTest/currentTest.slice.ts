@@ -19,11 +19,11 @@ export const currentTestSlice = createSlice({
   name: 'currentTest',
   initialState,
   reducers: {
-    changeCurrentQuestion: (state, action: PayloadAction<{index: number}>) => {
+    changeCurrentQuestion: (state, action: PayloadAction<{ index: number }>) => {
       state.currentQuestion = state.allQuestions && state.allQuestions[action.payload.index];
       localStorage.setItem('CurrentQuestion', JSON.stringify(state.currentQuestion));
     },
-    addAnswer: (state, action: PayloadAction<{idQuestion: string, idAnswersUser: string[]}>) => {
+    addAnswer: (state, action: PayloadAction<{ idQuestion: string, idAnswersUser: string[] }>) => {
       const indexAnswer = state.allAnswersUser?.findIndex((answer) => answer.idQuestion === action.payload.idQuestion);
       console.log(state.allAnswersUser);
       if (state.allAnswersUser && indexAnswer !== undefined && indexAnswer !== -1) {

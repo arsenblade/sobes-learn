@@ -1,5 +1,3 @@
-import React from 'react';
-import { useActions } from '../../../hooks/useActions';
 import { useAuth } from '../../../hooks/useAuth';
 import { ITopic } from '../../../types/topic.types';
 import SliderTheme from '../../ui/SliderTheme/SliderTheme';

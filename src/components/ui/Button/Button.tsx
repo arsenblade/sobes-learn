@@ -1,4 +1,4 @@
-import { FC, ReactNode, forwardRef } from 'react';
+import { ReactNode, forwardRef } from 'react';
 import cn from 'classnames';
 import { motion } from 'framer-motion';
 import styles from './Button.module.scss';

@@ -33,7 +33,72 @@
           "points": 3
         }
       ]
-    }
+    },
+    [
+      {
+        "topicId": "topic1-comments",
+        "comments": [
+          {
+            "commentId": "5fde4514-2df5-6fb6-9392-5f4c4cedf9a1",
+            "userId": "4fde4514-0df8-5fa6-8293-5f3c3cedf8b2",
+            "pubDate": "20-11-2022",
+            "username": "imaginator",
+            "commentText": "Я бы больше заострил внимание на конкурентах реакту",
+            "replies": []
+          },
+          {
+            "commentId": "4fde4514-0df9-5fb6-9291-5f3c3cedf9a1",
+            "userId": "4fde4514-0df9-5fa6-8291-4f3c3cedf9b1",
+            "pubDate": "18-11-2022",
+            "username": "holaynav",
+            "commentText": "Отличный познавательный урок!",
+            "replies": []
+          }
+        ]
+      },
+      {
+        "topicId": "topic2-comments",
+        "comments": [
+          {
+            "commentId": "5fde4514-2df4-5cb6-9392-5f4c4cedf9a1",
+            "userId": "4fde4514-0df8-5fa6-8293-5f3c3cedf8b2",
+            "pubDate": "20-11-2022",
+            "username": "imaginator",
+            "commentText": "Я бы больше заострил внимание на конкурентах реакту",
+            "replies": []
+          },
+          {
+            "commentId": "4dda4514-0df9-5fb6-9291-5f3c3cedf9a1",
+            "userId": "4fde4514-0df9-5fa6-8291-4f3c3cedf9b1",
+            "pubDate": "18-11-2022",
+            "username": "holaynav",
+            "commentText": "Отличный познавательный урок!",
+            "replies": []
+          }
+        ]
+      },
+      {
+        "topicId": "topic3-comments",
+        "comments": [
+          {
+            "commentId": "5fde4514-2df4-5cb6-9392-5f4c4cedf9a1",
+            "userId": "4fde4514-0df8-5fa6-8293-5f3c3cedf8b2",
+            "pubDate": "10-11-2022",
+            "username": "imaginator",
+            "commentText": "Я бы больше заострил внимание на конкурентах реакту",
+            "replies": []
+          },
+          {
+            "commentId": "6dda4514-0df9-5fb6-9282-5f3c3cedf9a1",
+            "userId": "4fde4514-0df9-5fa6-8291-4f3c3cedf9b1",
+            "pubDate": "18-11-2022",
+            "username": "holaynav",
+            "commentText": "Отличный познавательный урок!",
+            "replies": []
+          }
+        ]
+      }
+    ]
   ],
   "allTest": [
     {
@@ -444,7 +509,8 @@
       "numberTopic": 1,
       "relatedQuestionsId": "edeccac7-2c93-409f-82b1-2be1c8fe8777",
       "pictureTopicUrl": "react-poster.png",
-      "videoUrl": "first-class.mp4"
+      "videoUrl": "first-class.mp4",
+      "commentsId": "topic1-comments"
     },
     {
       "id": "48fbf953-edf0-4588-ac37-17f3b062919b",
@@ -454,7 +520,8 @@
       "numberTopic": 2,
       "relatedQuestionsId": "aa9f8e87-8ab0-401b-a25f-17662ac53665",
       "pictureTopicUrl": "react-poster.png",
-      "videoUrl": "second-class.mp4"
+      "videoUrl": "second-class.mp4",
+      "commentsId": "topic2-comments"
     },
     {
       "id": "d3068e00-18c7-4046-990a-6c1351a8ec85",
@@ -464,7 +531,156 @@
       "numberTopic": 3,
       "relatedQuestionsId": "f1315e00-c7fc-4789-b045-5e302fda1b14",
       "pictureTopicUrl": "react-poster.png",
-      "videoUrl": "third-class.mp4"
+      "videoUrl": "third-class.mp4",
+      "commentsId": "topic3-comments"
+    }
+  ],
+  "allComments": [
+    {
+      "id": "topic1-comments",
+      "comments": [
+        {
+          "id": "5fde4514-3df6-6fb6-8291-5f4c4cedf9a1",
+          "userId": "4fde4514-0df8-5fa6-8293-5f3c3cedf8b2",
+          "pubDate": "20-11-2022",
+          "username": "imaginator",
+          "commentText": "Я бы больше заострил внимание на конкурентах реакту",
+          "replies": [
+            {
+              "id": "19ffa64c-2191-4573-a977-be7127bab09f",
+              "userId": "1",
+              "pubDate": "19-03-2023",
+              "username": "Yen",
+              "commentText": "asdasdasd",
+              "replies": [],
+              "parentId": "5fde4514-3df6-6fb6-8291-5f4c4cedf9a1"
+            },
+            {
+              "id": "2e05f1e7-9d10-4fc9-ac85-7149afe8bac6",
+              "userId": "1",
+              "pubDate": "19-03-2023",
+              "username": "Yen",
+              "commentText": "qwsdkosdkgods",
+              "replies": [],
+              "parentId": "5fde4514-3df6-6fb6-8291-5f4c4cedf9a1"
+            }
+          ]
+        },
+        {
+          "id": "5fde4514-2df5-6fb6-9392-5f4c4cedf9a1",
+          "userId": "4fde4514-0df8-5fa6-8293-5f3c3cedf8b2",
+          "pubDate": "20-11-2022",
+          "username": "imaginator",
+          "commentText": "Я бы больше заострил внимание на конкурентах реакту",
+          "replies": [
+            {
+              "id": "1cb2b96b-7c31-41f1-9499-0c5bda2d1051",
+              "userId": "1",
+              "pubDate": "19-03-2023",
+              "username": "Yen",
+              "commentText": "ЗБС",
+              "replies": [],
+              "parentId": "5fde4514-2df5-6fb6-9392-5f4c4cedf9a1"
+            }
+          ]
+        },
+        {
+          "id": "4fde4514-0df9-6fс5-9291-5f3c3cedf9a1",
+          "userId": "4fde4514-0df9-5fa6-8291-4f3c3cedf9b1",
+          "pubDate": "18-11-2022",
+          "username": "holaynav",
+          "commentText": "Слишком много воды. Структуризируйте и скоратите информацию!",
+          "replies": []
+        },
+        {
+          "id": "be378dea-fc93-47d8-86ad-ffb8aca9e83a",
+          "userId": "1",
+          "pubDate": "21-03-2023",
+          "username": "Yen",
+          "commentText": "КАКОЙ КЛАССНЫЙ УРОК. ЭТО ЛУЧШЕЕ ЧТО Я ВИДЕЛ. Я СТАЛ СЕНЬОРОМ ЗА 3 МИНУТЫ. IBM и YANDEX ПЫТАЮТСЯ ПРОБИТЬ МОЮ ЛИЧКУ",
+          "replies": [],
+          "parentId": ""
+        }
+      ]
+    },
+    {
+      "id": "topic2-comments",
+      "comments": [
+        {
+          "id": "5fde4514-2df4-5cb6-9392-5f4c4cedf9a1",
+          "userId": "4fde4514-0df8-5fa6-8293-5f3c3cedf8b2",
+          "pubDate": "20-11-2022",
+          "username": "imaginator",
+          "commentText": "Я бы больше заострил внимание на конкурентах реакту",
+          "replies": []
+        },
+        {
+          "id": "4dda4514-0df9-5fb6-9291-5f3c3cedf9a1",
+          "userId": "4fde4514-0df9-5fa6-8291-4f3c3cedf9b1",
+          "pubDate": "18-11-2022",
+          "username": "holaynav",
+          "commentText": "Отличный познавательный урок!",
+          "replies": [
+            {
+              "id": "d2c66ef9-bc73-440a-a020-6de65130b511",
+              "userId": "1",
+              "pubDate": "19-03-2023",
+              "username": "Yen",
+              "commentText": "Трудно не согласиться",
+              "replies": [],
+              "parentId": "4dda4514-0df9-5fb6-9291-5f3c3cedf9a1"
+            }
+          ]
+        },
+        {
+          "id": "6937cba2-c247-4975-85c5-c43d2a6754cd",
+          "userId": "1",
+          "pubDate": "20-03-2023",
+          "username": "Yen",
+          "commentText": "Новый независимый комментарий",
+          "replies": [],
+          "parentId": ""
+        },
+        {
+          "id": "ebfd0ba3-472d-422a-912d-041f5b5ba254",
+          "userId": "1",
+          "pubDate": "20-03-2023",
+          "username": "Yen",
+          "commentText": "Новый независимый комментарий",
+          "replies": [],
+          "parentId": ""
+        },
+        {
+          "id": "7e29588e-3a97-48ed-9012-95a6ce05ca42",
+          "userId": "1",
+          "pubDate": "20-03-2023",
+          "username": "Yen",
+          "commentText": "Классно!",
+          "replies": [],
+          "parentId": ""
+        }
+      ]
+    },
+    {
+      "id": "topic3-comments",
+      "comments": [
+        {
+          "id": "5fde4514-2df4-5cb6-9392-5f4c4cedf9a1",
+          "userId": "4fde4514-0df8-5fa6-8293-5f3c3cedf8b2",
+          "pubDate": "10-11-2022",
+          "username": "imaginator",
+          "commentText": "Я бы больше заострил внимание на конкурентах реакту",
+          "replies": []
+        },
+        {
+          "id": "6dda4514-0df9-5fb6-9282-5f3c3cedf9a1",
+          "userId": "4fde4514-0df9-5fa6-8291-4f3c3cedf9b1",
+          "pubDate": "18-11-2022",
+          "username": "holaynav",
+          "commentText": "Отличный познавательный урок!",
+          "replies": []
+        }
+      ]
     }
   ]
 }

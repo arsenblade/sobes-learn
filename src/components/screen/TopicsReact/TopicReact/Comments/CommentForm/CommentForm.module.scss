@@ -1,0 +1,59 @@
+@import "../../../../../../styles/variables.scss";
+
+.commentForm {
+  align-items: flex-start;
+  width: 100%;
+  display: flex;
+  justify-content: left;
+  margin-top: 20px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid $darkGreyUnderline;
+
+  .formAvatar {
+    width: 70px;
+    height: 70px;
+    border-radius: 10px;
+  }
+}
+
+.commentFormMainInfo {
+  height: 100%;
+  width: 100%;
+  margin-left: 20px;
+
+  > {
+    span {
+      font-weight: 700;
+      padding: 0;
+      margin: 8px 0 0;
+      color: #d00;
+    }
+
+    p {
+      padding: 0;
+      margin: 0;
+      font-size: 10px;
+    }
+  }
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.buttonContainer {
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  border: none;
+}
+
+.commentFormInput {
+  min-height: 100px;
+  width: 100%;
+  margin: 0;
+}
+
+.submitButton {
+  margin-top: 15px;
+}

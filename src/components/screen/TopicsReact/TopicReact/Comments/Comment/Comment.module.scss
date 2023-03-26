@@ -1,0 +1,70 @@
+@import "../../../../../../styles/variables.scss";
+
+.comment {
+  align-items: flex-start;
+  display: flex;
+  justify-content: left;
+  margin-top: 30px;
+
+  .commentUserAvatar {
+    width: 70px;
+    height: 70px;
+    border-radius: 5px;
+  }
+}
+
+.commentMainInfo {
+  margin-left: 20px;
+
+  > p {
+    margin: 15px 0 0;
+    padding: 0;
+    font-size: 16px;
+  }
+}
+
+.commentOuterContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: space-between;
+}
+
+.commentInnerContainer {
+  height: 75px;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: space-around;
+
+  > {
+    p {
+      padding: 0;
+      margin: 0;
+      font-size: 16px;
+    }
+
+    h2 {
+      padding: 0;
+      margin: 0;
+      font-size: 20px;
+    }
+  }
+
+  border-bottom: 2px solid $darkGreyUnderline;
+}
+
+.buttonReply {
+  width: 50px;
+  cursor: pointer;
+  margin: 10px 0 0;
+  padding: 0;
+  font-size: 20px;
+  background: transparent;
+  color: $pink;
+  border: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
