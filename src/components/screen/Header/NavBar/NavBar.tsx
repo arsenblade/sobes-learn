@@ -32,8 +32,6 @@ const navSelectAnimation = {
   }),
 };
 
-const allCourseSelect: IOption[] = [{ label: 'Курс - реакт разработчик', value: 'react-developer-course', link: '/' }];
-
 const myLearnSelect: IOption[] = [{ label: 'Реакт разработчик', value: 'react-developer-learn', link: '/topics/react' }];
 
 const userMenuItems: IMenuOptions[] = [{ label: 'Личный кабинет', value: 'personal-area' }, { label: 'Выход', value: 'exit' }];
@@ -56,9 +54,6 @@ const NavBar:FC<INavBarProps> = ({ Auth }) => {
         unmountOnExit
       >
         <div className={cn(styles.navBarListMobile, styles.navBarListMobileOpened)}>
-          <div className={styles.navBarItem}>
-            <MobileMenuSelect options={allCourseSelect} title="Курсы" setVisibleMenu={setNavBarListVisible} />
-          </div>
           {user && (
           <div className={styles.navBarItem}>
             <MobileMenuSelect options={myLearnSelect} title="Мое обучение" setVisibleMenu={setNavBarListVisible} />
@@ -89,7 +84,6 @@ const NavBar:FC<INavBarProps> = ({ Auth }) => {
           variants={navSelectAnimation}
           custom={1}
         >
-          <Select options={allCourseSelect} placeholder="Курсы" />
           {isLoading === false && user && <Select options={myLearnSelect} placeholder="Мое обучение" />}
         </motion.div>
         {user && (
