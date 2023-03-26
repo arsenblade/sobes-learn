@@ -4,6 +4,7 @@ import { BrowserRouter } from 'react-router-dom';
 import Header from '../components/screen/Header/Header';
 import MyToastContainer from '../components/ui/MyToast/MyToastContainer';
 import AppRouter from '../router/AppRouter';
+import ErrorBoundary from './ErrorBoundary/ErrorBoundary';
 
 interface MainProviderProps {
   children: React.ReactNode
@@ -19,12 +20,14 @@ const queryClient = new QueryClient({
 
 const MainProvider:FC<MainProviderProps> = ({ children }) => (
   <BrowserRouter>
-    <QueryClientProvider client={queryClient}>
-      <Header Auth />
-      {children}
-      <MyToastContainer />
-      <AppRouter />
-    </QueryClientProvider>
+    <ErrorBoundary>
+      <QueryClientProvider client={queryClient}>
+        <Header Auth />
+        {children}
+        <MyToastContainer />
+        <AppRouter />
+      </QueryClientProvider>
+    </ErrorBoundary>
   </BrowserRouter>
 );
 
