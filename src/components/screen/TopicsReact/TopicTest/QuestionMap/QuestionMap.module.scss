@@ -1,0 +1,27 @@
+@import "../../../../../styles/variables.scss";
+
+.questionMap {
+  max-width: 1360px;
+  width: max-content;
+  display: flex;
+  flex-direction: column;
+  border: 5px solid $pink;
+  border-radius: 0.2em;
+  padding: 25px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.questionMapText {
+  margin: 0 auto 20px;
+  width: max-content;
+  font-size: 35px;
+  text-align: center;
+}
+
+.questions {
+  display: flex;
+  width: max-content;
+  margin-left: auto;
+  margin-right: auto;
+}

@@ -1,23 +1,24 @@
-import { ICurrentQuestion } from '../../types/question.types';
+import { IQuestion } from '../../types/question.types';
 
-export interface IInitialStateCurrentTest {
+export interface IInitialStateTest {
+  idTest: string | null;
+  topicTitle: string | null,
+  allQuestions: IQuestion[] | null;
+  currentQuestion: IQuestion | null;
+  userAnswers: IUserAnswer[] | null;
+  numberQuestion: number;
+  nextTopicId: string | null;
   isLoading: boolean;
-  allQuestions: ICurrentQuestion[] | null;
-  currentQuestion: ICurrentQuestion | null;
-  allAnswersUser: IAnswerUser[] | null;
-  currentTopicTitle: string | null;
-  idTest: string | null
-  nextTopicId: string | null
 }
 
-export interface IAnswerUser {
-  IdAnswersUser: string[];
+export interface IUserAnswer {
   idQuestion: string;
+  idAnswers: string[];
 }
 
 export interface ICurrentTestState {
-  allQuestions: ICurrentQuestion[]
-  currentTopicTitle: string,
   idTest: string
-  nextTopicId: string
+  topicTitle: string,
+  allQuestions: IQuestion[],
+  nextTopicId: string;
 }

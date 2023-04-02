@@ -28,6 +28,7 @@ module.exports = {
     'no-use-before-define': 'off',
     'import/prefer-default-export': 'off',
     'no-unused-vars': 'warn',
+    'linebreak-style': 'off',
     'react/require-default-props': 'off',
     'react/react-in-jsx-scope': 'off',
     'react/jsx-props-no-spreading': 'warn',

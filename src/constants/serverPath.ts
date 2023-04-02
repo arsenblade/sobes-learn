@@ -8,5 +8,6 @@ export const getAllTopics = () => '/topicsOfStudy';
 export const getByIdTopic = (id: string) => `/topicsOfStudy/${id}`;
 export const getAllComments = () => '/allComments';
 export const getCommentsByTopicId = (id: string) => `/allComments/${id}`;
-export const getByIdQuestions = (id: string) => `allTest/${id}`;
-export const getAllTest = () => 'allTest';
+export const getByIdQuestions = (id: string) => `/allTests/${id}`;
+export const getAllTest = () => '/allTests';
+export const getTestAnswers = (id: string) => `/answersToTests/${id}`;

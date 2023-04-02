@@ -1,25 +1,26 @@
-import { IAnswerUser } from '../store/currentTest/currentTest.interface';
-import { ICurrentQuestion } from '../types/question.types';
+import { IUserAnswer } from '../store/currentTest/currentTest.interface';
+import { ICorrectAnswersToQuestion } from '../types/question.types';
 
-export const getPointUser = (allQuestions: ICurrentQuestion[], answersUser: IAnswerUser[]) => {
+export const getPointUser = (userAnswers: IUserAnswer[], correctAnswers: ICorrectAnswersToQuestion[]) => {
   let points = 0;
-  allQuestions.forEach((question) => {
-    let numberEquals = 0;
-    question.correctAnswerId.forEach((correctAnswerId) => {
-      const answerUser = answersUser.find((answer) => answer.idQuestion === question.id);
-      if (answerUser !== undefined) {
-        const answer = answerUser.IdAnswersUser.find((aUser) => aUser === correctAnswerId);
+  const _ = require('lodash');
 
-        if (answer !== undefined) {
-          numberEquals += 1;
+  userAnswers.forEach((userAnswer) => {
+    const typeAnswer = correctAnswers.find((a) => a.idQuestion === userAnswer.idQuestion)?.typeAnswer;
+    const correctAnswer = correctAnswers.find((a) => a.idQuestion === userAnswer.idQuestion)?.idCorrectAnswers;
+    const sortUserAnswer = [...userAnswer.idAnswers].sort();
+
+    if (typeAnswer === 'text') {
+      correctAnswer?.forEach((cAnswer) => {
+        if (userAnswer.idAnswers.includes(cAnswer)) {
+          points += 1;
         }
-      }
-    });
+      });
+    }
 
-    if (numberEquals === question.correctAnswerId.length) {
+    if (correctAnswer !== undefined && _.isEqual(correctAnswer.sort(), sortUserAnswer)) {
       points += 1;
     }
   });
-
   return String(points);
 };

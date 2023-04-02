@@ -1,0 +1,33 @@
+@import "../../../../../styles/variables.scss";
+
+.questionItem {
+  width: 60px;
+  height: 60px;
+  background-color: #292727;
+  align-items: center;
+  border: 2px solid $pink;
+  border-radius: 0.2em;
+  display: flex;
+  margin-right: 14px;
+  cursor: pointer;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.questionNumber {
+  font-size: 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.questionItemCurrent {
+  background-color: $pink;
+  font-weight: bold;
+}
+
+.questionItemComplete {
+  background-color: $violet;
+  border-color: $violet;
+}
