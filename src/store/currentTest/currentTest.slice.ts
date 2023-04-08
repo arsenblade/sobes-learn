@@ -25,7 +25,6 @@ export const currentTestSlice = createSlice({
     },
     addAnswer: (state, action: PayloadAction<{ idQuestion: string, idAnswersUser: string[] }>) => {
       const indexAnswer = state.allAnswersUser?.findIndex((answer) => answer.idQuestion === action.payload.idQuestion);
-      console.log(state.allAnswersUser);
       if (state.allAnswersUser && indexAnswer !== undefined && indexAnswer !== -1) {
         state.allAnswersUser[indexAnswer] = {
           IdAnswersUser: action.payload.idAnswersUser,
