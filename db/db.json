@@ -25,12 +25,12 @@
         {
           "idUser": 1,
           "idTest": "aa9f8e87-8ab0-401b-a25f-17662ac53665",
-          "points": 1
+          "points": 6
         },
         {
           "idUser": 1,
           "idTest": "f1315e00-c7fc-4789-b045-5e302fda1b14",
-          "points": 3
+          "points": 6
         }
       ]
     },
@@ -100,402 +100,545 @@
       }
     ]
   ],
-  "allTest": [
+  "allTests": [
     {
       "id": "edeccac7-2c93-409f-82b1-2be1c8fe8777",
-      "currentQuestions": [
+      "questions": [
         {
-          "id": "8c906ba9-5aad-4737-9a0e-d978f980fa1d",
-          "allAnswer": [
+          "idQuestion": "8c906ba9-5aad-4737-9a0e-d978f980fa1d",
+          "textQuestion": "Что такое React ?",
+          "typeAnswers": "checkbox",
+          "answerOptions": [
             {
-              "id": "98a8db77-58fd-488f-a445-708c9b9d7e62",
+              "idAnswer": "98a8db77-58fd-488f-a445-708c9b9d7e62",
               "idQuestion": "8c906ba9-5aad-4737-9a0e-d978f980fa1d",
               "textAnswer": "Это библиотека JavaScript с открытым кодом для создания внешних пользовательских интерфейсов"
             },
             {
-              "id": "408c56cd-280d-4b4c-ad51-226e6aef063f",
+              "idAnswer": "408c56cd-280d-4b4c-ad51-226e6aef063f",
               "idQuestion": "8c906ba9-5aad-4737-9a0e-d978f980fa1d",
               "textAnswer": "Это библиотека по сжатию изображений и видео"
             },
             {
-              "id": "3a34de4a-0313-416a-b07d-e1d7c6ff45df",
+              "idAnswer": "3a34de4a-0313-416a-b07d-e1d7c6ff45df",
               "idQuestion": "8c906ba9-5aad-4737-9a0e-d978f980fa1d",
               "textAnswer": "Это приложения для создания HTML верстки сайта"
             }
-          ],
-          "correctAnswerId": [
-            "98a8db77-58fd-488f-a445-708c9b9d7e62"
-          ],
-          "textQuestion": "Что такое React ?"
+          ]
         },
         {
-          "id": "2c544733-bab4-40b3-ac95-ce0c5fbb8a25",
-          "allAnswer": [
+          "idQuestion": "2c544733-bab4-40b3-ac95-ce0c5fbb8a25",
+          "textQuestion": "Как установить React в свою среду разработки ?",
+          "typeAnswers": "radio",
+          "answerOptions": [
             {
-              "id": "40746524-bc7d-4dff-914f-50e8987e074a",
+              "idAnswer": "40746524-bc7d-4dff-914f-50e8987e074a",
               "idQuestion": "2c544733-bab4-40b3-ac95-ce0c5fbb8a25",
               "textAnswer": "Скачать установщик с официального сайта и запустить"
             },
             {
-              "id": "2de2317c-9e89-40c9-a45a-4016c977f18f",
+              "idAnswer": "2de2317c-9e89-40c9-a45a-4016c977f18f",
               "idQuestion": "2c544733-bab4-40b3-ac95-ce0c5fbb8a25",
               "textAnswer": "В созданном проекте в терминале написать команду npm install react"
             },
             {
-              "id": "91a239a6-1e20-4a58-991e-0336850f8426",
+              "idAnswer": "91a239a6-1e20-4a58-991e-0336850f8426",
               "idQuestion": "2c544733-bab4-40b3-ac95-ce0c5fbb8a25",
               "textAnswer": "Попросить друга скинуть файл с React"
             }
-          ],
-          "correctAnswerId": [
-            "2de2317c-9e89-40c9-a45a-4016c977f18f"
-          ],
-          "textQuestion": "Как установить React в свою среду разработки ?"
+          ]
         },
         {
-          "id": "e9747877-0183-454b-a209-4e96adec4b20",
-          "allAnswer": [
+          "idQuestion": "e9747877-0183-454b-a209-4e96adec4b20",
+          "textQuestion": "Какие библиотеки и фреймворки для создания SPA существуют? ",
+          "typeAnswers": "checkbox",
+          "answerOptions": [
             {
-              "id": "7c73c73c-c643-411b-8295-756d858c9c9f",
+              "idAnswer": "7c73c73c-c643-411b-8295-756d858c9c9f",
               "idQuestion": "e9747877-0183-454b-a209-4e96adec4b20",
               "textAnswer": "React"
             },
             {
-              "id": "d9b59967-ecce-4790-95fe-8eec2c25e7e2",
+              "idAnswer": "d9b59967-ecce-4790-95fe-8eec2c25e7e2",
               "idQuestion": "e9747877-0183-454b-a209-4e96adec4b20",
               "textAnswer": "Vue"
             },
             {
-              "id": "d0d4e815-b844-4401-a84e-7ccf09ddf958",
+              "idAnswer": "d0d4e815-b844-4401-a84e-7ccf09ddf958",
               "idQuestion": "e9747877-0183-454b-a209-4e96adec4b20",
               "textAnswer": "Angular"
             },
             {
-              "id": "7b8afe4e-ec8b-40cc-a153-550d65f6894b",
+              "idAnswer": "7b8afe4e-ec8b-40cc-a153-550d65f6894b",
               "idQuestion": "e9747877-0183-454b-a209-4e96adec4b20",
               "textAnswer": "Svelt"
             }
-          ],
-          "correctAnswerId": [
-            "7c73c73c-c643-411b-8295-756d858c9c9f",
-            "d9b59967-ecce-4790-95fe-8eec2c25e7e2",
-            "d0d4e815-b844-4401-a84e-7ccf09ddf958",
-            "7b8afe4e-ec8b-40cc-a153-550d65f6894b"
-          ],
-          "textQuestion": "Какие библиотеки и фреймворки для создания SPA существуют? "
+          ]
         },
         {
-          "id": "63b6c506-bed0-47ed-bf58-e5308e2d6bcc",
-          "allAnswer": [
+          "idQuestion": "63b6c506-bed0-47ed-bf58-e5308e2d6bcc",
+          "textQuestion": "Как быстро создать React проект ?",
+          "typeAnswers": "radio",
+          "answerOptions": [
             {
-              "id": "45a84f24-0ea0-4d6d-9d23-73dfd07b625d",
+              "idAnswer": "45a84f24-0ea0-4d6d-9d23-73dfd07b625d",
               "idQuestion": "63b6c506-bed0-47ed-bf58-e5308e2d6bcc",
               "textAnswer": "Скачать все зависимости и создать все нужные папки и файлы"
             },
             {
-              "id": "27a505ce-c171-43f5-b4e1-3ae08ba1a6df",
+              "idAnswer": "27a505ce-c171-43f5-b4e1-3ae08ba1a6df",
               "idQuestion": "63b6c506-bed0-47ed-bf58-e5308e2d6bcc",
               "textAnswer": "Написать в терминале npm create react app"
             }
-          ],
-          "correctAnswerId": [
-            "27a505ce-c171-43f5-b4e1-3ae08ba1a6df"
-          ],
-          "textQuestion": "Как быстро создать React проект ?"
+          ]
         },
         {
-          "id": "d8fa1943-c0f2-413d-b037-b0a6fc411ec1",
-          "allAnswer": [
+          "idQuestion": "d8fa1943-c0f2-413d-b037-b0a6fc411ec1",
+          "textQuestion": "На каком языке пишут на React ?",
+          "typeAnswers": "checkbox",
+          "answerOptions": [
             {
-              "id": "3818850e-5772-45d8-8d01-6fceeb646c46",
+              "idAnswer": "3818850e-5772-45d8-8d01-6fceeb646c46",
               "idQuestion": "d8fa1943-c0f2-413d-b037-b0a6fc411ec1",
               "textAnswer": "JavaScript"
             },
             {
-              "id": "b6958ae5-9be4-4607-aa1f-fe5fcf2efe71",
+              "idAnswer": "b6958ae5-9be4-4607-aa1f-fe5fcf2efe71",
               "idQuestion": "d8fa1943-c0f2-413d-b037-b0a6fc411ec1",
               "textAnswer": "Java"
             },
             {
-              "id": "a709c848-2029-40d4-8a26-86617e2f0bd3",
+              "idAnswer": "a709c848-2029-40d4-8a26-86617e2f0bd3",
               "idQuestion": "d8fa1943-c0f2-413d-b037-b0a6fc411ec1",
               "textAnswer": "Python"
             },
             {
-              "id": "de8b5c31-79b0-4267-bdfc-72e98b2bfa02",
+              "idAnswer": "de8b5c31-79b0-4267-bdfc-72e98b2bfa02",
               "idQuestion": "d8fa1943-c0f2-413d-b037-b0a6fc411ec1",
               "textAnswer": "TypeScript"
             }
-          ],
-          "correctAnswerId": [
-            "3818850e-5772-45d8-8d01-6fceeb646c46",
-            "de8b5c31-79b0-4267-bdfc-72e98b2bfa02"
-          ],
-          "textQuestion": "На каком языке пишут на React ?"
+          ]
         }
       ]
     },
     {
       "id": "aa9f8e87-8ab0-401b-a25f-17662ac53665",
-      "currentQuestions": [
+      "questions": [
         {
-          "id": "8511a187-35cf-4fd6-87bf-899e1c446ec0",
-          "allAnswer": [
+          "idQuestion": "8511a187-35cf-4fd6-87bf-899e1c446ec0",
+          "textQuestion": "Что такое функциональный компонент ?",
+          "typeAnswers": "radio",
+          "answerOptions": [
             {
-              "id": "26071b4c-6d01-4208-bdbb-f8cf92772d23",
+              "idAnswer": "26071b4c-6d01-4208-bdbb-f8cf92772d23",
               "idQuestion": "8511a187-35cf-4fd6-87bf-899e1c446ec0",
               "textAnswer": "Это JavaScript-функция, на входе получает объект с данными, а на выходе возвращает описание интерфейса, который нужно отобразить"
             },
             {
-              "id": "6292a19e-9d95-494d-ae55-c02dd0b0d726",
+              "idAnswer": "6292a19e-9d95-494d-ae55-c02dd0b0d726",
               "idQuestion": "8511a187-35cf-4fd6-87bf-899e1c446ec0",
               "textAnswer": "Это JavaScript-функция, которая ничего не принимает, а просто возвращает описание интерфейса, который нужно отобразить"
             },
             {
-              "id": "8e284a84-565a-47ea-aa9b-e6348559f817",
+              "idAnswer": "8e284a84-565a-47ea-aa9b-e6348559f817",
               "idQuestion": "8511a187-35cf-4fd6-87bf-899e1c446ec0",
               "textAnswer": "Это JavaScript-функция, на входе получает объект с данными и ничего не возвращает "
             }
-          ],
-          "correctAnswerId": [
-            "26071b4c-6d01-4208-bdbb-f8cf92772d23"
-          ],
-          "textQuestion": "Что такое функциональный компонент ?"
+          ]
         },
         {
-          "id": "fd24bfdc-1ae5-44cb-b383-2924d5a78f7b",
-          "allAnswer": [
+          "idQuestion": "fd24bfdc-1ae5-44cb-b383-2924d5a78f7b",
+          "textQuestion": "Что такое хуки ?",
+          "typeAnswers": "radio",
+          "answerOptions": [
             {
-              "id": "63df4e2d-35de-462b-811a-622a4900596a",
+              "idAnswer": "63df4e2d-35de-462b-811a-622a4900596a",
               "idQuestion": "fd24bfdc-1ae5-44cb-b383-2924d5a78f7b",
               "textAnswer": "Переменные которые можно создавать для обновления компонента"
             },
             {
-              "id": "5e59af94-5918-4874-89f7-7169e5926424",
+              "idAnswer": "5e59af94-5918-4874-89f7-7169e5926424",
               "idQuestion": "fd24bfdc-1ae5-44cb-b383-2924d5a78f7b",
               "textAnswer": "Объект данных, который позволяет работать с асинхронным кодом"
             },
             {
-              "id": "8519092b-6727-42fd-8eb6-3c68a91632f4",
+              "idAnswer": "8519092b-6727-42fd-8eb6-3c68a91632f4",
               "idQuestion": "fd24bfdc-1ae5-44cb-b383-2924d5a78f7b",
               "textAnswer": "Это функции, с помощью которых вы можете \"подцепиться\" к состоянию и методам жизненного цикла React из функциональных компонентов"
             }
-          ],
-          "correctAnswerId": [
-            "8519092b-6727-42fd-8eb6-3c68a91632f4"
-          ],
-          "textQuestion": "Что такое хуки ?"
+          ]
         },
         {
-          "id": "b5e20aed-0034-474f-b4e4-2205c422f85a",
-          "allAnswer": [
+          "idQuestion": "b5e20aed-0034-474f-b4e4-2205c422f85a",
+          "textQuestion": "Что делает хук useState ?",
+          "typeAnswers": "radio",
+          "answerOptions": [
             {
-              "id": "f54c3acb-fffb-4e10-8135-eedd9a5ceb80",
+              "idAnswer": "f54c3acb-fffb-4e10-8135-eedd9a5ceb80",
               "idQuestion": "b5e20aed-0034-474f-b4e4-2205c422f85a",
               "textAnswer": "Хук для работы с состоянием"
             },
             {
-              "id": "e7fd5fd9-2c5d-4fd1-ab4e-df50c9f26afd",
+              "idAnswer": "e7fd5fd9-2c5d-4fd1-ab4e-df50c9f26afd",
               "idQuestion": "b5e20aed-0034-474f-b4e4-2205c422f85a",
               "textAnswer": "Хук для мемоизации функций"
             },
             {
-              "id": "11d8d429-65a0-4389-a2cf-6cc6178e9bc7",
+              "idAnswer": "11d8d429-65a0-4389-a2cf-6cc6178e9bc7",
               "idQuestion": "b5e20aed-0034-474f-b4e4-2205c422f85a",
               "textAnswer": "Хук для имитирования жизненных циклов компонента"
             }
-          ],
-          "correctAnswerId": [
-            "f54c3acb-fffb-4e10-8135-eedd9a5ceb80"
-          ],
-          "textQuestion": "Что делает хук useState ?"
+          ]
         },
         {
-          "id": "4c95dfc6-6bf3-4257-8f11-2e381ccaecc4",
-          "allAnswer": [
+          "idQuestion": "4c95dfc6-6bf3-4257-8f11-2e381ccaecc4",
+          "textQuestion": "Что делает хук useEffect ?",
+          "typeAnswers": "radio",
+          "answerOptions": [
             {
-              "id": "99de0e3e-0d10-4fde-a1a6-fe3371e8b2eb",
+              "idAnswer": "99de0e3e-0d10-4fde-a1a6-fe3371e8b2eb",
               "idQuestion": "4c95dfc6-6bf3-4257-8f11-2e381ccaecc4",
               "textAnswer": "Позволяет осуществлять навигацию по приложению"
             },
             {
-              "id": "c5282a0d-3c4c-406b-b113-d655b7757002",
+              "idAnswer": "c5282a0d-3c4c-406b-b113-d655b7757002",
               "idQuestion": "4c95dfc6-6bf3-4257-8f11-2e381ccaecc4",
               "textAnswer": "Работает с состоянием приложения"
             },
             {
-              "id": "63bba9ca-6185-43f3-954c-e3c620837a32",
+              "idAnswer": "63bba9ca-6185-43f3-954c-e3c620837a32",
               "idQuestion": "4c95dfc6-6bf3-4257-8f11-2e381ccaecc4",
               "textAnswer": "Имитирует жизненный цикл компонента"
             }
-          ],
-          "correctAnswerId": [
-            "63bba9ca-6185-43f3-954c-e3c620837a32"
-          ],
-          "textQuestion": "Что делает хук useEffect ?"
+          ]
         },
         {
-          "id": "5102d36b-5f2d-4da3-8998-73b7dcdc5c69",
-          "allAnswer": [
+          "idQuestion": "5102d36b-5f2d-4da3-8998-73b7dcdc5c69",
+          "textQuestion": "Какие хуки есть в React ?",
+          "typeAnswers": "checkbox",
+          "answerOptions": [
             {
-              "id": "49dd3b88-9eab-4eaa-a265-505b2591d386",
+              "idAnswer": "49dd3b88-9eab-4eaa-a265-505b2591d386",
               "idQuestion": "5102d36b-5f2d-4da3-8998-73b7dcdc5c69",
               "textAnswer": "useMemo"
             },
             {
-              "id": "6dc6a23a-a479-4df0-a87b-621d01b1b552",
+              "idAnswer": "6dc6a23a-a479-4df0-a87b-621d01b1b552",
               "idQuestion": "5102d36b-5f2d-4da3-8998-73b7dcdc5c69",
               "textAnswer": "useEffect"
             },
             {
-              "id": "87943d3d-69a1-43a5-8452-7c4e78e4eb1d",
+              "idAnswer": "87943d3d-69a1-43a5-8452-7c4e78e4eb1d",
               "idQuestion": "5102d36b-5f2d-4da3-8998-73b7dcdc5c69",
               "textAnswer": "useAddTheme"
             },
             {
-              "id": "40f44c9d-bb36-4bcd-8172-009a4339f3af",
+              "idAnswer": "40f44c9d-bb36-4bcd-8172-009a4339f3af",
               "idQuestion": "5102d36b-5f2d-4da3-8998-73b7dcdc5c69",
               "textAnswer": "useDelete"
             }
-          ],
-          "correctAnswerId": [
-            "49dd3b88-9eab-4eaa-a265-505b2591d386",
-            "6dc6a23a-a479-4df0-a87b-621d01b1b552"
-          ],
-          "textQuestion": "Какие хуки есть в React ?"
+          ]
+        },
+        {
+          "idQuestion": "6102d36b-5f2d-4da3-8998-73b7dcdc5c69",
+          "textQuestion": "Ты классный?",
+          "typeAnswers": "radio",
+          "answerOptions": [
+            {
+              "idAnswer": "59dd3b88-9eab-4eaa-a265-505b2591d386",
+              "idQuestion": "6102d36b-5f2d-4da3-8998-73b7dcdc5c69",
+              "textAnswer": "ДА"
+            },
+            {
+              "idAnswer": "5dc6a23a-a479-4df0-a87b-621d01b1b552",
+              "idQuestion": "6102d36b-5f2d-4da3-8998-73b7dcdc5c69",
+              "textAnswer": "нет"
+            }
+          ]
         }
       ]
     },
     {
       "id": "f1315e00-c7fc-4789-b045-5e302fda1b14",
-      "currentQuestions": [
+      "questions": [
         {
-          "id": "90a09590-4c2e-49a4-8b22-6031219e7791",
-          "allAnswer": [
+          "idQuestion": "90a09590-4c2e-49a4-8b22-6031219e7791",
+          "textQuestion": "Что нужно сделать чтоб пользоваться роутингом в React ?",
+          "typeAnswers": "radio",
+          "answerOptions": [
             {
-              "id": "3642b801-22cc-406e-b428-1025d88c2274",
+              "idAnswer": "3642b801-22cc-406e-b428-1025d88c2274",
               "idQuestion": "90a09590-4c2e-49a4-8b22-6031219e7791",
               "textAnswer": "Ничего, он изначально идет в React"
             },
             {
-              "id": "6583e88f-d05c-4e14-9962-da124384f32a",
+              "idAnswer": "6583e88f-d05c-4e14-9962-da124384f32a",
               "idQuestion": "90a09590-4c2e-49a4-8b22-6031219e7791",
               "textAnswer": "Установить программу на компьютер, чтоб им воспользоваться"
             },
             {
-              "id": "362967b8-53bd-4d2a-b139-1fb96fce34ce",
+              "idAnswer": "362967b8-53bd-4d2a-b139-1fb96fce34ce",
               "idQuestion": "90a09590-4c2e-49a4-8b22-6031219e7791",
               "textAnswer": "Установить через терминал командой npm i react-router-dom"
             }
-          ],
-          "correctAnswerId": [
-            "362967b8-53bd-4d2a-b139-1fb96fce34ce"
-          ],
-          "textQuestion": "Что нужно сделать чтоб пользоваться роутингом в React ?"
+          ]
         },
         {
-          "id": "3032e72c-e2bc-4616-b32e-e4da0c2d2b05",
-          "allAnswer": [
+          "idQuestion": "3032e72c-e2bc-4616-b32e-e4da0c2d2b05",
+          "textQuestion": "Как сделать ссылку, при нажатии на которую страница не обновлялась ?",
+          "typeAnswers": "checkbox",
+          "answerOptions": [
             {
-              "id": "654f4d2a-50ab-421b-ac1d-67f49d5e139c",
+              "idAnswer": "654f4d2a-50ab-421b-ac1d-67f49d5e139c",
               "idQuestion": "3032e72c-e2bc-4616-b32e-e4da0c2d2b05",
               "textAnswer": "Такая ссылка это тег <a></a>"
             },
             {
-              "id": "08712f43-45f6-41a6-b514-17860d41426f",
+              "idAnswer": "08712f43-45f6-41a6-b514-17860d41426f",
               "idQuestion": "3032e72c-e2bc-4616-b32e-e4da0c2d2b05",
               "textAnswer": "Использовать специальный тег <Link></Link>"
             },
             {
-              "id": "a87070e7-40de-488f-985b-ddf201f26592",
+              "idAnswer": "a87070e7-40de-488f-985b-ddf201f26592",
               "idQuestion": "3032e72c-e2bc-4616-b32e-e4da0c2d2b05",
               "textAnswer": "Использовать хук useNavigate и повесить обработчик клика на обычную ссылку "
             }
-          ],
-          "correctAnswerId": [
-            "08712f43-45f6-41a6-b514-17860d41426f",
-            "a87070e7-40de-488f-985b-ddf201f26592"
-          ],
-          "textQuestion": "Как сделать ссылку, при нажатии на которую страница не обновлялась ?"
+          ]
         },
         {
-          "id": "183ab206-c19b-4200-a20b-ff348301ee49",
-          "allAnswer": [
+          "idQuestion": "183ab206-c19b-4200-a20b-ff348301ee49",
+          "textQuestion": "Каким тегом объединить все роуты ?",
+          "typeAnswers": "radio",
+          "answerOptions": [
             {
-              "id": "1d9a284a-7e82-410c-98a6-6f7540825556",
+              "idAnswer": "1d9a284a-7e82-410c-98a6-6f7540825556",
               "idQuestion": "183ab206-c19b-4200-a20b-ff348301ee49",
               "textAnswer": "Тегом <Routes>"
             },
             {
-              "id": "abfd2d06-23aa-45cc-a5fb-1553b41ad842",
+              "idAnswer": "abfd2d06-23aa-45cc-a5fb-1553b41ad842",
               "idQuestion": "183ab206-c19b-4200-a20b-ff348301ee49",
               "textAnswer": "Тегом <Switch>"
             },
             {
-              "id": "2bca982a-6644-4a2a-a9b2-fdb922864c22",
+              "idAnswer": "2bca982a-6644-4a2a-a9b2-fdb922864c22",
               "idQuestion": "183ab206-c19b-4200-a20b-ff348301ee49",
               "textAnswer": "Тегом <UniteRoutes>"
             }
-          ],
-          "correctAnswerId": [
-            "1d9a284a-7e82-410c-98a6-6f7540825556"
-          ],
-          "textQuestion": "Каким тегом объединить все роуты ?"
+          ]
         },
         {
-          "id": "8fb281c2-d625-4467-9617-fca07ff4c221",
-          "allAnswer": [
+          "idQuestion": "8fb281c2-d625-4467-9617-fca07ff4c221",
+          "textQuestion": "Каким тегом создать роут ?",
+          "typeAnswers": "radio",
+          "answerOptions": [
             {
-              "id": "9cc7c22c-207b-434b-82e0-429ae1c02403",
+              "idAnswer": "9cc7c22c-207b-434b-82e0-429ae1c02403",
               "idQuestion": "8fb281c2-d625-4467-9617-fca07ff4c221",
               "textAnswer": "<RoutesCurrent>"
             },
             {
-              "id": "ea6a778b-4b83-4e69-b896-dbb5315f2b28",
+              "idAnswer": "ea6a778b-4b83-4e69-b896-dbb5315f2b28",
               "idQuestion": "8fb281c2-d625-4467-9617-fca07ff4c221",
               "textAnswer": "<Route>"
             },
             {
-              "id": "250be3f9-3f6b-4004-afbf-4bdd9b889008",
+              "idAnswer": "250be3f9-3f6b-4004-afbf-4bdd9b889008",
               "idQuestion": "8fb281c2-d625-4467-9617-fca07ff4c221",
               "textAnswer": "<Rout>"
             }
-          ],
-          "correctAnswerId": [
-            "ea6a778b-4b83-4e69-b896-dbb5315f2b28"
-          ],
-          "textQuestion": "Каким тегом создать роут ?"
+          ]
         },
         {
-          "id": "5a089a3e-9c5c-45f8-827c-18deae7cf16c",
-          "allAnswer": [
+          "idQuestion": "5a089a3e-9c5c-45f8-827c-18deae7cf16c",
+          "textQuestion": "Какие хуки есть в react-router-dom ?",
+          "typeAnswers": "checkbox",
+          "answerOptions": [
             {
-              "id": "57c3516c-f7b3-441f-9945-74728f7dd1cd",
+              "idAnswer": "57c3516c-f7b3-441f-9945-74728f7dd1cd",
               "idQuestion": "5a089a3e-9c5c-45f8-827c-18deae7cf16c",
               "textAnswer": "useLocation"
             },
             {
-              "id": "24f6ef9f-fb83-4e3a-9ce7-74d040b085c8",
+              "idAnswer": "24f6ef9f-fb83-4e3a-9ce7-74d040b085c8",
               "idQuestion": "5a089a3e-9c5c-45f8-827c-18deae7cf16c",
               "textAnswer": "useParams"
             },
             {
-              "id": "79ec1a1b-af1e-44ce-956e-996361f94771",
+              "idAnswer": "79ec1a1b-af1e-44ce-956e-996361f94771",
               "idQuestion": "5a089a3e-9c5c-45f8-827c-18deae7cf16c",
               "textAnswer": "useNavigation"
             },
             {
-              "id": "d7374145-64cd-4e6b-b431-89accd73eef4",
+              "idAnswer": "d7374145-64cd-4e6b-b431-89accd73eef4",
               "idQuestion": "5a089a3e-9c5c-45f8-827c-18deae7cf16c",
               "textAnswer": "useReactRouterCurrent"
             }
-          ],
-          "correctAnswerId": [
+          ]
+        },
+        {
+          "idQuestion": "9102d36b-5f2d-4da3-8998-73b7dcdc5c69",
+          "textQuestion": "Ты классный?",
+          "typeAnswers": "text"
+        },
+        {
+          "idQuestion": "99a09590-4c2e-49a4-8b22-6031219e7791",
+          "textQuestion": "Что нужно сделать чтоб пользоваться роутингом в React ?",
+          "typeAnswers": "radio",
+          "answerOptions": [
+            {
+              "idAnswer": "9642b801-22cc-406e-b428-1025d88c2274",
+              "idQuestion": "99a09590-4c2e-49a4-8b22-6031219e7791",
+              "textAnswer": "Ничего, он изначально идет в React"
+            },
+            {
+              "idAnswer": "9583e88f-d05c-4e14-9962-da124384f32a",
+              "idQuestion": "99a09590-4c2e-49a4-8b22-6031219e7791",
+              "textAnswer": "Установить программу на компьютер, чтоб им воспользоваться"
+            },
+            {
+              "idAnswer": "962967b8-53bd-4d2a-b139-1fb96fce34ce",
+              "idQuestion": "99a09590-4c2e-49a4-8b22-6031219e7791",
+              "textAnswer": "Установить через терминал командой npm i react-router-dom"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "answersToTests": [
+    {
+      "id": "edeccac7-2c93-409f-82b1-2be1c8fe8777",
+      "answersToQuestions": [
+        {
+          "idQuestion": "8c906ba9-5aad-4737-9a0e-d978f980fa1d",
+          "idCorrectAnswers": [
+            "98a8db77-58fd-488f-a445-708c9b9d7e62"
+          ]
+        },
+        {
+          "idQuestion": "2c544733-bab4-40b3-ac95-ce0c5fbb8a25",
+          "idCorrectAnswers": [
+            "2de2317c-9e89-40c9-a45a-4016c977f18f"
+          ]
+        },
+        {
+          "idQuestion": "e9747877-0183-454b-a209-4e96adec4b20",
+          "idCorrectAnswers": [
+            "7c73c73c-c643-411b-8295-756d858c9c9f",
+            "d9b59967-ecce-4790-95fe-8eec2c25e7e2",
+            "d0d4e815-b844-4401-a84e-7ccf09ddf958",
+            "7b8afe4e-ec8b-40cc-a153-550d65f6894b"
+          ]
+        },
+        {
+          "idQuestion": "63b6c506-bed0-47ed-bf58-e5308e2d6bcc",
+          "idCorrectAnswers": [
+            "27a505ce-c171-43f5-b4e1-3ae08ba1a6df"
+          ]
+        },
+        {
+          "idQuestion": "d8fa1943-c0f2-413d-b037-b0a6fc411ec1",
+          "idCorrectAnswers": [
+            "3818850e-5772-45d8-8d01-6fceeb646c46",
+            "de8b5c31-79b0-4267-bdfc-72e98b2bfa02"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "aa9f8e87-8ab0-401b-a25f-17662ac53665",
+      "answersToQuestions": [
+        {
+          "idQuestion": "8511a187-35cf-4fd6-87bf-899e1c446ec0",
+          "idCorrectAnswers": [
+            "26071b4c-6d01-4208-bdbb-f8cf92772d23"
+          ]
+        },
+        {
+          "idQuestion": "fd24bfdc-1ae5-44cb-b383-2924d5a78f7b",
+          "idCorrectAnswers": [
+            "8519092b-6727-42fd-8eb6-3c68a91632f4"
+          ]
+        },
+        {
+          "idQuestion": "b5e20aed-0034-474f-b4e4-2205c422f85a",
+          "idCorrectAnswers": [
+            "f54c3acb-fffb-4e10-8135-eedd9a5ceb80"
+          ]
+        },
+        {
+          "idQuestion": "4c95dfc6-6bf3-4257-8f11-2e381ccaecc4",
+          "idCorrectAnswers": [
+            "63bba9ca-6185-43f3-954c-e3c620837a32"
+          ]
+        },
+        {
+          "idQuestion": "5102d36b-5f2d-4da3-8998-73b7dcdc5c69",
+          "idCorrectAnswers": [
+            "49dd3b88-9eab-4eaa-a265-505b2591d386",
+            "6dc6a23a-a479-4df0-a87b-621d01b1b552"
+          ]
+        },
+        {
+          "idQuestion": "6102d36b-5f2d-4da3-8998-73b7dcdc5c69",
+          "idCorrectAnswers": [
+            "59dd3b88-9eab-4eaa-a265-505b2591d386"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "f1315e00-c7fc-4789-b045-5e302fda1b14",
+      "answersToQuestions": [
+        {
+          "idQuestion": "90a09590-4c2e-49a4-8b22-6031219e7791",
+          "idCorrectAnswers": [
+            "362967b8-53bd-4d2a-b139-1fb96fce34ce"
+          ]
+        },
+        {
+          "idQuestion": "3032e72c-e2bc-4616-b32e-e4da0c2d2b05",
+          "idCorrectAnswers": [
+            "08712f43-45f6-41a6-b514-17860d41426f",
+            "a87070e7-40de-488f-985b-ddf201f26592"
+          ]
+        },
+        {
+          "idQuestion": "183ab206-c19b-4200-a20b-ff348301ee49",
+          "idCorrectAnswers": [
+            "1d9a284a-7e82-410c-98a6-6f7540825556"
+          ]
+        },
+        {
+          "idQuestion": "8fb281c2-d625-4467-9617-fca07ff4c221",
+          "idCorrectAnswers": [
+            "ea6a778b-4b83-4e69-b896-dbb5315f2b28"
+          ]
+        },
+        {
+          "idQuestion": "5a089a3e-9c5c-45f8-827c-18deae7cf16c",
+          "idCorrectAnswers": [
             "57c3516c-f7b3-441f-9945-74728f7dd1cd",
             "24f6ef9f-fb83-4e3a-9ce7-74d040b085c8",
             "79ec1a1b-af1e-44ce-956e-996361f94771"
+          ]
+        },
+        {
+          "idQuestion": "9102d36b-5f2d-4da3-8998-73b7dcdc5c69",
+          "idCorrectAnswers": [
+            "Да",
+            "да",
+            "Конечно",
+            "конечно"
           ],
-          "textQuestion": "Какие хуки есть в react-router-dom ?"
+          "typeAnswer": "text"
+        },
+        {
+          "idQuestion": "99a09590-4c2e-49a4-8b22-6031219e7791",
+          "idCorrectAnswers": [
+            "962967b8-53bd-4d2a-b139-1fb96fce34ce"
+          ]
         }
       ]
     }
@@ -616,6 +759,34 @@
           "pubDate": "26-03-2023",
           "username": "Arsen",
           "commentText": "rgrgrgrrgrgrgrgrgrgrgrgrgrgrrrgr",
+          "replies": [],
+          "parentId": ""
+        },
+        {
+          "id": "37e46264-10ef-4760-b7c2-d20aafe869ed",
+          "userId": "1",
+          "pubDate": "28-03-2023",
+          "username": "Yen134",
+          "commentText": "Пушка гонка",
+          "replies": [
+            {
+              "id": "d331cef5-1c80-4edf-a9ad-50a3627c6442",
+              "userId": "1",
+              "pubDate": "28-03-2023",
+              "username": "Yen134",
+              "commentText": "не согласен",
+              "replies": [],
+              "parentId": "37e46264-10ef-4760-b7c2-d20aafe869ed"
+            }
+          ],
+          "parentId": ""
+        },
+        {
+          "id": "226b4262-1a0a-4e03-9fb1-f86d274ef76e",
+          "userId": "1",
+          "pubDate": "1-04-2023",
+          "username": "Yen134",
+          "commentText": "все супер",
           "replies": [],
           "parentId": ""
         }

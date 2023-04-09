@@ -46,7 +46,10 @@ const TopicReact = () => {
         nextTopicId = allTopics[indexCurrentTopic + 1].id;
       }
       createCurrentTest({
-        id: currentTopic.relatedQuestionsId, currentTopicTitle: currentTopic.titleTopic, idTest: currentTopic.relatedQuestionsId, nextTopicId,
+        id: currentTopic.relatedQuestionsId,
+        topicTitle: currentTopic.titleTopic,
+        idTest: currentTopic.relatedQuestionsId,
+        nextTopicId,
       });
       navigate(`/topics/test/${currentTopic.relatedQuestionsId}`);
     }

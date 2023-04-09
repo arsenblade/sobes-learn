@@ -1,23 +1,32 @@
-import { IAnswerUser } from '../store/currentTest/currentTest.interface';
-import { ICurrentQuestion } from '../types/question.types';
+import { IUserAnswer } from '../store/currentTest/currentTest.interface';
+import { ICorrectAnswersToQuestion } from '../types/question.types';
 
-export const getPointUser = (allQuestions: ICurrentQuestion[], answersUser: IAnswerUser[]) => {
+export const getPointUser = (userAnswers: IUserAnswer[], correctAnswers: ICorrectAnswersToQuestion[]) => {
   let points = 0;
-  allQuestions.forEach((question) => {
-    let numberEquals = 0;
-    question.correctAnswerId.forEach((correctAnswerId) => {
-      const answerUser = answersUser.find((answer) => answer.idQuestion === question.id);
-      if (answerUser !== undefined) {
-        const answer = answerUser.IdAnswersUser.find((aUser) => aUser === correctAnswerId);
+  const _ = require('lodash');
 
-        if (answer !== undefined) {
-          numberEquals += 1;
-        }
+  const correctAnswersMap = new Map<string, ICorrectAnswersToQuestion>();
+
+  correctAnswers.forEach((correctAnswer) => { correctAnswersMap.set(correctAnswer.idQuestion, correctAnswer); });
+
+  userAnswers.forEach((userAnswer) => {
+    const correctAnswer = correctAnswersMap.get(userAnswer.idQuestion);
+    if (correctAnswer) {
+      const typeAnswer = correctAnswer.typeAnswer;
+      const sortUserAnswer = [...userAnswer.idAnswers].sort();
+      const sortCorrectAnswer = [...correctAnswer.idCorrectAnswers].sort();
+
+      if (typeAnswer === 'text') {
+        correctAnswer.idCorrectAnswers.forEach((corAnswer) => {
+          if (userAnswer.idAnswers.includes(corAnswer)) {
+            points += 1;
+          }
+        });
       }
-    });
 
-    if (numberEquals === question.correctAnswerId.length) {
-      points += 1;
+      if (_.isEqual(sortCorrectAnswer, sortUserAnswer)) {
+        points += 1;
+      }
     }
   });
 

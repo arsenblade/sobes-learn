@@ -15,17 +15,22 @@ const Modal:FC<IModal> = ({
   // eslint-disable-next-line no-undef
   let timer: string | number | NodeJS.Timeout | undefined;
   let textNumber;
+
   if (active) {
     timer = setTimeout(() => { setActive(false); clearTimeout(timer); }, 3000);
     timer = undefined;
   }
 
-  if (count === 0 || count === 5) {
-    textNumber = 'Баллов';
-  } else if (count === 1) {
-    textNumber = 'Балл';
+  const lastDigit = count % 10;
+  const lastTwoDigits = count % 100;
+  if (lastTwoDigits >= 11 && lastTwoDigits <= 14) {
+    textNumber = 'баллов';
+  } else if (lastDigit === 1) {
+    textNumber = 'балл';
+  } else if (lastDigit >= 2 && lastDigit <= 4) {
+    textNumber = 'балла';
   } else {
-    textNumber = 'Балла';
+    textNumber = 'баллов';
   }
 
   const closeModalHandler = () => {
