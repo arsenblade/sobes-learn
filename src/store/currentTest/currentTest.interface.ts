@@ -22,3 +22,20 @@ export interface ICurrentTestState {
   allQuestions: IQuestion[],
   nextTopicId: string;
 }
+
+export interface ICreateCurrentTest {
+  id: string,
+  topicTitle: string,
+  idTest: string,
+  nextTopicId: string | 'lastTopic'
+}
+
+export interface ISaveTestResult {
+  idUser: string,
+  idTest: string,
+  points: string
+}
+
+export interface IGetTestAnswers {
+  id: string
+}

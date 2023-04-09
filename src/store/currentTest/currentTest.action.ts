@@ -2,9 +2,13 @@ import { createAsyncThunk } from '@reduxjs/toolkit';
 import { userTest } from '../../service/userTest/userTest.service';
 import { ICorrectAnswersToTest } from '../../types/question.types';
 import { IUser } from '../../types/user.types';
-import { ICurrentTestState } from './currentTest.interface';
+import {
+  ICreateCurrentTest,
+  ICurrentTestState, IGetTestAnswers,
+  ISaveTestResult,
+} from './currentTest.interface';
 
-export const createCurrentTest = createAsyncThunk<ICurrentTestState, {id: string, topicTitle: string, idTest: string, nextTopicId: string | 'lastTopic'} >('create current test', async ({
+export const createCurrentTest = createAsyncThunk<ICurrentTestState, ICreateCurrentTest>('create current test', async ({
   id, topicTitle, idTest, nextTopicId,
 }, thunkApi) => {
   try {
@@ -21,7 +25,7 @@ export const createCurrentTest = createAsyncThunk<ICurrentTestState, {id: string
   }
 });
 
-export const getTestAnswers = createAsyncThunk<ICorrectAnswersToTest, {id: string}>('get test answer', async ({
+export const getTestAnswers = createAsyncThunk<ICorrectAnswersToTest, IGetTestAnswers>('get test answer', async ({
   id,
 }, thunkApi) => {
   try {
@@ -36,7 +40,7 @@ export const getTestAnswers = createAsyncThunk<ICorrectAnswersToTest, {id: strin
   }
 });
 
-export const saveTestResult = createAsyncThunk<IUser, {idUser: string, idTest: string, points: string}>('save test result', async ({
+export const saveTestResult = createAsyncThunk<IUser, ISaveTestResult>('save test result', async ({
   idUser, idTest, points,
 }, thunkApi) => {
   try {

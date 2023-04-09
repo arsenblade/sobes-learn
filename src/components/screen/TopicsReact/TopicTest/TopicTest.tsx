@@ -27,8 +27,8 @@ const TopicTest = () => {
   const [typeQuestionAnimation, setTypeQuestionAnimation] = useState<'back' | 'next' | 'current'>('current');
   const [isQuestionAnimation, setIsQuestionAnimation] = useState<boolean>(true);
   const [isViewModal, setIsViewModal] = useState<boolean>(false);
-  const [testPoints, setTestPoints] = useState(0);
-  const [textAnswer, setTextAnswer] = useState('');
+  const [testPoints, setTestPoints] = useState<number>(0);
+  const [textAnswer, setTextAnswer] = useState<string>('');
 
   const { user } = useAuth();
 
@@ -55,7 +55,7 @@ const TopicTest = () => {
 
   const currentIndex = allQuestions?.findIndex((question) => question.idQuestion === currentQuestion?.idQuestion);
 
-  const nextMapQuestion = (i: number) => {
+  const nextMapQuestion = (questionNumber: number) => {
     if (currentQuestion && currentIndex !== undefined && allQuestions) {
       if (currentIndex < allQuestions.length) {
         addAnswer({
@@ -66,7 +66,7 @@ const TopicTest = () => {
         setIsQuestionAnimation(false);
 
         setTimeout(() => {
-          changeCurrentQuestion({ index: i });
+          changeCurrentQuestion({ numberQuestion: questionNumber });
           setIdCheckedBtns([]);
           setTypeQuestionAnimation('back');
           setIsQuestionAnimation(true);
@@ -117,7 +117,7 @@ const TopicTest = () => {
   const saveResultTest = async () => {
     if (currentQuestion && currentIndex !== undefined && allQuestions && user && idTest && nextTopicId) {
       const indexAnswer = userAnswers?.findIndex((answer) => answer.idQuestion === currentQuestion.idQuestion);
-      const allUserAnswers = userAnswers?.map((a) => ({ ...a }));
+      const allUserAnswers = userAnswers?.map((userAnswer) => ({ ...userAnswer }));
 
       if (allUserAnswers && indexAnswer !== undefined && indexAnswer !== -1) {
         allUserAnswers[indexAnswer] = {
@@ -173,7 +173,7 @@ const TopicTest = () => {
             {allQuestions?.length}
           </span>
         </div>
-        <QuestionMap allQuestions={allQuestions} cb={nextMapQuestion} />
+        <QuestionMap allQuestions={allQuestions} onClick={nextMapQuestion} />
         <div className={styles.contentTest} style={{ overflow: 'hidden' }}>
           <CSSTransition
             in={isQuestionAnimation}
@@ -185,9 +185,39 @@ const TopicTest = () => {
             <div>
               <h2 className={styles.questions}>{currentQuestion?.textQuestion}</h2>
               <div className={styles.answersContainer}>
-                {currentQuestion.typeAnswers === 'radio' && currentQuestion.answerOptions.map((answer) => <RadioButton onChange={(checked) => checked === true && setIdCheckedBtns([answer.idAnswer])} key={answer.idAnswer} className={styles.answer} type="radioBtn" checked={idCheckedBtns.some((idRadio) => idRadio === answer.idAnswer)}>{answer.textAnswer}</RadioButton>)}
-                {currentQuestion.typeAnswers === 'checkbox' && currentQuestion.answerOptions.map((answer) => <Checkbox onChange={(checked) => handleClickCheckbox(checked, answer.idAnswer)} key={answer.idAnswer} className={styles.answer} checked={idCheckedBtns.some((idCheckbox) => idCheckbox === answer.idAnswer)}>{answer.textAnswer}</Checkbox>)}
-                {currentQuestion.typeAnswers === 'text' && <FormInput onChange={(e) => { setTextAnswer(e.target.value); setIdCheckedBtns([e.target.value]); }} value={textAnswer} />}
+                {currentQuestion.typeAnswers === 'radio'
+                  && currentQuestion.answerOptions.map((answer) => (
+                    <RadioButton
+                      key={answer.idAnswer}
+                      className={styles.answer}
+                      type="radioBtn"
+                      checked={idCheckedBtns.some((idRadio) => idRadio === answer.idAnswer)}
+                      onChange={(checked) => checked === true && setIdCheckedBtns([answer.idAnswer])}
+                    >
+                      {answer.textAnswer}
+                    </RadioButton>
+                  ))}
+                {currentQuestion.typeAnswers === 'checkbox'
+                  && currentQuestion.answerOptions.map((answer) => (
+                    <Checkbox
+                      key={answer.idAnswer}
+                      className={styles.answer}
+                      checked={idCheckedBtns.some((idCheckbox) => idCheckbox === answer.idAnswer)}
+                      onChange={(checked) => handleClickCheckbox(checked, answer.idAnswer)}
+                    >
+                      {answer.textAnswer}
+                    </Checkbox>
+                  ))}
+                {currentQuestion.typeAnswers === 'text'
+                  && (
+                    <FormInput
+                      value={textAnswer}
+                      onChange={(e) => {
+                        setTextAnswer(e.target.value);
+                        setIdCheckedBtns([e.target.value]);
+                      }}
+                    />
+                  )}
               </div>
             </div>
           </CSSTransition>

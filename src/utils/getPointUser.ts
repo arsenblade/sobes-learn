@@ -5,22 +5,30 @@ export const getPointUser = (userAnswers: IUserAnswer[], correctAnswers: ICorrec
   let points = 0;
   const _ = require('lodash');
 
+  const correctAnswersMap = new Map<string, ICorrectAnswersToQuestion>();
+
+  correctAnswers.forEach((correctAnswer) => { correctAnswersMap.set(correctAnswer.idQuestion, correctAnswer); });
+
   userAnswers.forEach((userAnswer) => {
-    const typeAnswer = correctAnswers.find((a) => a.idQuestion === userAnswer.idQuestion)?.typeAnswer;
-    const correctAnswer = correctAnswers.find((a) => a.idQuestion === userAnswer.idQuestion)?.idCorrectAnswers;
-    const sortUserAnswer = [...userAnswer.idAnswers].sort();
+    const correctAnswer = correctAnswersMap.get(userAnswer.idQuestion);
+    if (correctAnswer) {
+      const typeAnswer = correctAnswer.typeAnswer;
+      const sortUserAnswer = [...userAnswer.idAnswers].sort();
+      const sortCorrectAnswer = [...correctAnswer.idCorrectAnswers].sort();
 
-    if (typeAnswer === 'text') {
-      correctAnswer?.forEach((cAnswer) => {
-        if (userAnswer.idAnswers.includes(cAnswer)) {
-          points += 1;
-        }
-      });
-    }
+      if (typeAnswer === 'text') {
+        correctAnswer.idCorrectAnswers.forEach((corAnswer) => {
+          if (userAnswer.idAnswers.includes(corAnswer)) {
+            points += 1;
+          }
+        });
+      }
 
-    if (correctAnswer !== undefined && _.isEqual(correctAnswer.sort(), sortUserAnswer)) {
-      points += 1;
+      if (_.isEqual(sortCorrectAnswer, sortUserAnswer)) {
+        points += 1;
+      }
     }
   });
+
   return String(points);
 };

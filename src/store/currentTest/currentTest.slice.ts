@@ -20,9 +20,9 @@ export const currentTestSlice = createSlice({
   name: 'currentTest',
   initialState,
   reducers: {
-    changeCurrentQuestion: (state, action: PayloadAction<{index: number}>) => {
-      state.numberQuestion = action.payload.index;
-      state.currentQuestion = state.allQuestions && state.allQuestions[action.payload.index];
+    changeCurrentQuestion: (state, action: PayloadAction<{numberQuestion: number}>) => {
+      state.numberQuestion = action.payload.numberQuestion;
+      state.currentQuestion = state.allQuestions && state.allQuestions[action.payload.numberQuestion];
       localStorage.setItem('currentQuestion', JSON.stringify(state.currentQuestion));
     },
     addAnswer: (state, action: PayloadAction<{ idQuestion: string, idAnswersUser: string[] }>) => {
