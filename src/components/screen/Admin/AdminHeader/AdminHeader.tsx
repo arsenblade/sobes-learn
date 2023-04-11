@@ -25,6 +25,14 @@ const AdminHeader = () => {
         >
           <span>Добавить темы</span>
         </Link>
+        <Link
+          className={cn(styles.link, styles.userEditIcon, {
+            [styles.currentActiveUserEdit]: pathname === '/manage/users/list',
+          })}
+          to="/manage/users/list"
+        >
+          <span>Пользователи</span>
+        </Link>
       </div>
     </div>
   );

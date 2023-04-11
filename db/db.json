@@ -6,8 +6,43 @@
       "password": "654321",
       "name": "Arsen",
       "avatar": "/avatar",
+      "isAdmin": true,
+      "pointTests": [],
+      "regDate": "19.05.2022",
+      "isBanned": false
+    },
+    {
+      "id": "23aaeryrte123dfgbf52",
+      "email": "VityaKS@inbox.ru",
+      "password": "1111111",
+      "name": "Victor",
+      "avatar": "/avatar",
       "isAdmin": false,
-      "pointTests": []
+      "pointTests": [],
+      "regDate": "19.01.2022",
+      "isBanned": false
+    },
+    {
+      "id": "23ayjvdbrte123aa52",
+      "email": "vict0r2007@mail.ru",
+      "password": "654321aaaa",
+      "name": "Victor",
+      "avatar": "/avatar",
+      "isAdmin": false,
+      "pointTests": [],
+      "regDate": "19.01.2022",
+      "isBanned": true
+    },
+    {
+      "id": "asd123as2352",
+      "email": "test@mail.ru",
+      "password": "654321",
+      "name": "Artem",
+      "avatar": "/avatar",
+      "isAdmin": false,
+      "pointTests": [],
+      "regDate": "19.02.2022",
+      "isBanned": false
     },
     {
       "id": "1",
@@ -32,73 +67,10 @@
           "idTest": "f1315e00-c7fc-4789-b045-5e302fda1b14",
           "points": 6
         }
-      ]
-    },
-    [
-      {
-        "topicId": "topic1-comments",
-        "comments": [
-          {
-            "commentId": "5fde4514-2df5-6fb6-9392-5f4c4cedf9a1",
-            "userId": "4fde4514-0df8-5fa6-8293-5f3c3cedf8b2",
-            "pubDate": "20-11-2022",
-            "username": "imaginator",
-            "commentText": "Я бы больше заострил внимание на конкурентах реакту",
-            "replies": []
-          },
-          {
-            "commentId": "4fde4514-0df9-5fb6-9291-5f3c3cedf9a1",
-            "userId": "4fde4514-0df9-5fa6-8291-4f3c3cedf9b1",
-            "pubDate": "18-11-2022",
-            "username": "holaynav",
-            "commentText": "Отличный познавательный урок!",
-            "replies": []
-          }
-        ]
-      },
-      {
-        "topicId": "topic2-comments",
-        "comments": [
-          {
-            "commentId": "5fde4514-2df4-5cb6-9392-5f4c4cedf9a1",
-            "userId": "4fde4514-0df8-5fa6-8293-5f3c3cedf8b2",
-            "pubDate": "20-11-2022",
-            "username": "imaginator",
-            "commentText": "Я бы больше заострил внимание на конкурентах реакту",
-            "replies": []
-          },
-          {
-            "commentId": "4dda4514-0df9-5fb6-9291-5f3c3cedf9a1",
-            "userId": "4fde4514-0df9-5fa6-8291-4f3c3cedf9b1",
-            "pubDate": "18-11-2022",
-            "username": "holaynav",
-            "commentText": "Отличный познавательный урок!",
-            "replies": []
-          }
-        ]
-      },
-      {
-        "topicId": "topic3-comments",
-        "comments": [
-          {
-            "commentId": "5fde4514-2df4-5cb6-9392-5f4c4cedf9a1",
-            "userId": "4fde4514-0df8-5fa6-8293-5f3c3cedf8b2",
-            "pubDate": "10-11-2022",
-            "username": "imaginator",
-            "commentText": "Я бы больше заострил внимание на конкурентах реакту",
-            "replies": []
-          },
-          {
-            "commentId": "6dda4514-0df9-5fb6-9282-5f3c3cedf9a1",
-            "userId": "4fde4514-0df9-5fa6-8291-4f3c3cedf9b1",
-            "pubDate": "18-11-2022",
-            "username": "holaynav",
-            "commentText": "Отличный познавательный урок!",
-            "replies": []
-          }
-        ]
-      }
-    ]
+      ],
+      "regDate": "17.09.2022",
+      "isBanned": false
+    }
   ],
   "allTests": [
     {

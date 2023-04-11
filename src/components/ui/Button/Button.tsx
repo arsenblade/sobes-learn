@@ -5,7 +5,7 @@ import styles from './Button.module.scss';
 
 interface IButton {
   children: ReactNode
-  color: 'Pink' | 'White' | 'Violet'
+  color: 'Pink' | 'White' | 'Violet' | 'Red' | 'Green'
   disabled?: boolean,
   className?: string,
   onClick?: () => void
@@ -20,6 +20,8 @@ const Button = forwardRef<HTMLDivElement, IButton>(({
       [styles.btnWhite]: color === 'White',
       [styles.btnPink]: color === 'Pink',
       [styles.btnViolet]: color === 'Violet',
+      [styles.btnRed]: color === 'Red',
+      [styles.btnGreen]: color === 'Green',
       [`${className}`]: className && className,
       [styles.disabled]: disabled,
       [styles.noDisabled]: !disabled,

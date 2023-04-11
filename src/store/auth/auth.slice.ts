@@ -26,6 +26,8 @@ export const authSlice = createSlice({
           avatar: payload.avatar,
           pointTests: payload.pointTests,
           isAdmin: payload.isAdmin,
+          regDate: payload.regDate,
+          isBanned: payload.isBanned,
         };
         MyToast('Вы успешно зарегистрировались', true);
       })
@@ -45,6 +47,8 @@ export const authSlice = createSlice({
           avatar: payload.avatar,
           pointTests: payload.pointTests,
           isAdmin: payload.isAdmin,
+          regDate: payload.regDate,
+          isBanned: payload.isBanned,
         };
         MyToast('Вы успешно авторизировались', true);
       })

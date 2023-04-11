@@ -5,7 +5,9 @@ export interface IUser {
   name: string;
   avatar: string;
   isAdmin: boolean;
-  pointTests: IPointTest[]
+  pointTests: IPointTest[];
+  regDate: string;
+  isBanned: boolean;
 }
 
 export interface IPointTest {

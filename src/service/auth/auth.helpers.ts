@@ -9,6 +9,8 @@ export const saveTokenStorage = (token: string, user: IUser) => {
     name: user.name,
     id: user.id,
     isAdmin: user.isAdmin,
+    regDate: user.regDate,
+    isBanned: user.isBanned,
   };
   localStorage.setItem('user', JSON.stringify(userStorage));
 };

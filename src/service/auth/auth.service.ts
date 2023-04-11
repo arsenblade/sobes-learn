@@ -1,6 +1,9 @@
 import { axiosPublic } from '../../api/interceptors';
-import { getLoginUrl, getRegisterUrl, getUsersUrl } from '../../constants/serverPath';
+import {
+  getLoginUrl, getRegisterUrl, getUsersUrl, getUserUrl,
+} from '../../constants/serverPath';
 import { IUser } from '../../types/user.types';
+import { dateToString } from '../../utils/dateToString';
 import { removeTokenStorage, saveTokenStorage } from './auth.helpers';
 
 const uuid = require('uuid');
@@ -36,6 +39,8 @@ export const authService = {
       name,
       avatar,
       isAdmin: false,
+      regDate: dateToString(new Date()),
+      isBanned: false,
     };
 
     const response = await axiosPublic.post<IUser>(getRegisterUrl(), defaultUser);
