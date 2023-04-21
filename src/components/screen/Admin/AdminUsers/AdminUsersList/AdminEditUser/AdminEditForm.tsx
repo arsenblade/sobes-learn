@@ -13,9 +13,7 @@ interface IAdminEditForm {
   user: IUser;
 }
 
-const AdminEditForm = (props: IAdminEditForm) => {
-  const { user } = props;
-
+const AdminEditForm = ({ user }: IAdminEditForm) => {
   const [email, setEmail] = useState<string>(user.email);
   const [password, setPassword] = useState<string>(user.password);
   const [isBanned, setIsBanned] = useState<boolean>(user.isBanned);
@@ -28,6 +26,8 @@ const AdminEditForm = (props: IAdminEditForm) => {
   const { editUser } = useActions();
   const navigate = useNavigate();
 
+  const emailRegular = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
   useEffect(() => {
     if (emailError === '' && passwordError === '') {
       setIsDisabled(false);
@@ -36,8 +36,12 @@ const AdminEditForm = (props: IAdminEditForm) => {
     setIsDisabled(true);
   }, [emailError, passwordError]);
 
-  const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
+  const handleFormSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    if (email === user.email && isAdmin === user.isAdmin && isBanned === user.isBanned && password === user.password) {
+      navigate('/manage/users/list');
+      return;
+    }
     const newUser: IEditUserState = {
       email,
       id: user.id,
@@ -50,8 +54,8 @@ const AdminEditForm = (props: IAdminEditForm) => {
     navigate('/manage/users/list');
   };
 
-  const handleFormPassword = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const text = e.target.value;
+  const handleFormPassword = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const text = event.target.value;
 
     if (text.length < 7) {
       if (text.trim().length === 0) {
@@ -69,13 +73,11 @@ const AdminEditForm = (props: IAdminEditForm) => {
     setPasswordError('');
   };
 
-  const handleFormEmail = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const text = e.target.value;
+  const handleFormEmail = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const text = event.target.value;
     if (!text
       .toLowerCase()
-      .match(
-        /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
-      )) {
+      .match(emailRegular)) {
       if (text.trim().length === 0) {
         setEmailError('* Email не может быть пустым');
         return;
@@ -88,19 +90,19 @@ const AdminEditForm = (props: IAdminEditForm) => {
   };
 
   return (
-    <form onSubmit={(e) => handleFormSubmit(e)} className={styles.adminEditform}>
+    <form onSubmit={(event) => handleFormSubmit(event)} className={styles.adminEditform}>
       <label htmlFor="email" className={styles.inputLabel}>Email:</label>
-      <FormInput id="email" type="email" defaultValue={email} onChange={(e) => handleFormEmail(e)} />
+      <FormInput id="email" type="email" defaultValue={email} onChange={(event) => handleFormEmail(event)} />
       <p className={styles.errorLabel}>{emailError}</p>
 
       <label htmlFor="password" className={styles.inputLabel}>Password:</label>
-      <FormInput id="password" type="password" defaultValue={password} onChange={(e) => handleFormPassword(e)} />
+      <FormInput id="password" type="password" defaultValue={password} onChange={(event) => handleFormPassword(event)} />
       <p className={styles.errorLabel}>{passwordError}</p>
       <div className={styles.adminStatus}>
         <p>Сделать админом</p>
         <Checkbox
           className={styles.checkbox}
-          onChange={(e) => setIsAdmin(e)}
+          onChange={(event) => setIsAdmin(event)}
           checked={isAdmin}
         />
       </div>

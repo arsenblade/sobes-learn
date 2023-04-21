@@ -9,8 +9,7 @@ interface IAdminModal {
   title: string
 }
 
-const AdminDeleteModal = (props: IAdminModal) => {
-  const { acceptButton, declineButton, title } = props;
+const AdminDeleteModal = ({ acceptButton, declineButton, title }: IAdminModal) => {
   const isLoading = useTypedSelector((state) => state.user.isLoading);
 
   return (

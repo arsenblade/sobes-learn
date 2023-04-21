@@ -14,13 +14,13 @@
     {
       "id": "23aaeryrte123dfgbf52",
       "email": "VityaKS@inbox.ru",
-      "password": "1111111",
+      "password": "1111111asdasdas",
       "name": "Victor",
       "avatar": "/avatar",
-      "isAdmin": false,
+      "isAdmin": true,
       "pointTests": [],
       "regDate": "19.01.2022",
-      "isBanned": false
+      "isBanned": true
     },
     {
       "id": "23ayjvdbrte123aa52",
@@ -31,12 +31,12 @@
       "isAdmin": false,
       "pointTests": [],
       "regDate": "19.01.2022",
-      "isBanned": true
+      "isBanned": false
     },
     {
       "id": "asd123as2352",
       "email": "test@mail.ru",
-      "password": "654321",
+      "password": "654321aaa",
       "name": "Artem",
       "avatar": "/avatar",
       "isAdmin": false,
@@ -55,7 +55,7 @@
         {
           "idUser": "1",
           "idTest": "edeccac7-2c93-409f-82b1-2be1c8fe8777",
-          "points": 5
+          "points": 0
         },
         {
           "idUser": 1,

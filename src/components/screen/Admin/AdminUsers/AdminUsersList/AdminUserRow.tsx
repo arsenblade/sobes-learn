@@ -1,13 +1,9 @@
-import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import cn from 'classnames';
-import userEvent from '@testing-library/user-event';
 import { useActions } from '../../../../../hooks/useActions';
 import { useTypedSelector } from '../../../../../hooks/useTypedSelector';
-import Button from '../../../../ui/Button/Button';
 import AdminDeleteModal from './AdminDeleteModal/AdminDeleteModal';
 import styles from './AdminUsersList.module.scss';
-import { banUser } from '../../../../../store/user/user.actions';
 import { IBanUser } from '../../../../../store/user/user.interface';
 
 const photoUser = require('../../../../../assets/img/avatar-small.jpg');
@@ -34,12 +30,18 @@ const AdminUserRow = (props: IUserColumn) => {
 
   const navigate = useNavigate();
 
+  const cellStyle = cn({
+    [styles.redBanText]: isBanned,
+    [styles.blueText]: isAdmin && !isBanned,
+    [styles.whiteText]: !isBanned && !isAdmin,
+  });
+
   const banUserHandler = () => {
-    const banObj: IBanUser = {
+    const banUserProps: IBanUser = {
       id,
       banStatus: !isBanned,
     };
-    banUser(banObj);
+    banUser(banUserProps);
   };
 
   const getUserStatus = () => {
@@ -49,21 +51,18 @@ const AdminUserRow = (props: IUserColumn) => {
   };
 
   return (
-    <tr className={cn({
-      [styles.redBanText]: isBanned,
-      [styles.blueText]: isAdmin && !isBanned,
-      [styles.whiteText]: !isBanned && !isAdmin,
-    })}
-    >
-      <td width="5%"><img alt="user avatar" src={photoUser} className={styles.userColumnAvatar} /></td>
-      <td width="35%">
-        {name}
-        {' '}
-        {getUserStatus()}
-      </td>
-      <td width="30%">{email}</td>
-      <td width="30%">{regDate}</td>
-      <td className={styles.userColumnActions}>
+    <>
+      <div><img alt="user avatar" src={photoUser} className={styles.userColumnAvatar} /></div>
+      <div className={cellStyle}>
+        <p>
+          {name}
+          {' '}
+          {getUserStatus()}
+        </p>
+      </div>
+      <div className={cellStyle}><p>{email}</p></div>
+      <div className={cellStyle}><p>{regDate}</p></div>
+      <div className={styles.userColumnActions}>
         {modalStatus === id ? (
           <AdminDeleteModal
             acceptButton={banUserHandler}
@@ -83,8 +82,8 @@ const AdminUserRow = (props: IUserColumn) => {
         >
           <img alt="ban user" src={isBanned ? checkImg : xmarkImg} className={styles.actionButtonImg} />
         </button>
-      </td>
-    </tr>
+      </div>
+    </>
   );
 };
 

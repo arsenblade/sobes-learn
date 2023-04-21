@@ -27,11 +27,9 @@ export const banUser = createAsyncThunk<IUser[], IBanUser>('banUser', async ({
   }
 });
 
-export const editUser = createAsyncThunk<IUser[], IEditUserState>('editUser', async ({
-  email, password, id, isAdmin, name, isBanned,
-}, thunkApi) => {
+export const editUser = createAsyncThunk<IUser[], IEditUserState>('editUser', async (user, thunkApi) => {
   try {
-    await userService.updateUser(id, email, password, name, isBanned, isAdmin);
+    await userService.updateUser(user);
     const response = await userService.getAll();
     return response.data;
   } catch (e) {

@@ -9,6 +9,7 @@ import { IUser } from '../../../../types/user.types';
 import { userService } from '../../../../service/user/user.service';
 import { useAuth } from '../../../../hooks/useAuth';
 import { MyToast } from '../../../ui/MyToast/MyToast';
+import { IEditUserState } from '../../../../store/user/user.interface';
 
 const photoUser = require('../../../../assets/img/author-img.png');
 
@@ -58,7 +59,15 @@ const ProfileSettings = () => {
 
   const updateUser = () => {
     if (currentUser) {
-      userService.updateUser(currentUser.id, userEmail, userPassword, userName);
+      const updatedUser: IEditUserState = {
+        id: currentUser.id,
+        email: userEmail,
+        password: userPassword,
+        name: userName,
+        isBanned: currentUser.isBanned,
+        isAdmin: currentUser.isAdmin,
+      };
+      userService.updateUser(updatedUser);
       MyToast('Обновление прошло успешно', true);
     }
   };

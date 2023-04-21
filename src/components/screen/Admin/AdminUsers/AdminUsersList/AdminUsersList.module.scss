@@ -30,44 +30,43 @@
 }
 
 .userTable {
+  display: grid;
   width: 100%;
   border-collapse: collapse;
-  margin: 20px 0;
+  margin-bottom: 30px;
+  grid-template-columns: 0.1fr 4fr 4fr 3fr 0.5fr;
+  grid-row-gap: 1em;
 
-  > thead {
-    height: 50px;
-    margin-top: 50px;
-    border-bottom: solid 3px $darkGreyUnderline;
+  >div {
+    padding-top: 5px;
 
-    > tr {
-      :last-child {
-        text-align: right;
-        padding-right: 15px;
+    >p {
+      @media (max-width: 800px) {
+        font-size: 13px;
       }
+
+      @media (max-width: 600px) {
+        font-size: 12px;
+      }
+
+      line-height: 2.5;
     }
+
+    height: 70px;
+    align-self: center;
+    border-top: 4px solid $darkGreyUnderline;
   }
 
-  > tbody,
-  thead {
-    border: none;
+  >div:nth-child(5) {
+    text-align: right;
+    margin-right: 15px;
+  }
 
-    > tr {
-      border: none;
-
-      >th,
-      td {
-        border: none;
-        text-align: left;
-      }
-
-      th {
-        color: white;
-      }
-    }
-
-    &:first-child {
-      width: 50px;
-    }
+  >div:nth-child(-n+5) {
+    line-height: 1;
+    height: 55px;
+    border: 0;
+    color: white;
   }
 }
 
@@ -84,9 +83,8 @@
   display: flex;
   align-items: center;
   justify-content: right;
-  margin-top: 28px;
 
-  > button {
+  >button {
     padding: 0;
     border: none;
     background: none;

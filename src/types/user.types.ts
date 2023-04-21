@@ -10,6 +10,15 @@ export interface IUser {
   isBanned: boolean;
 }
 
+export interface IUpdateUser {
+  id: string,
+  email: string,
+  password: string,
+  name: string,
+  isBanned?: boolean,
+  isAdmin?: boolean,
+}
+
 export interface IPointTest {
   idUser: string;
   idTest: string;

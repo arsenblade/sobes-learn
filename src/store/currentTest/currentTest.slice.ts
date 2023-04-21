@@ -26,10 +26,10 @@ export const currentTestSlice = createSlice({
       localStorage.setItem('currentQuestion', JSON.stringify(state.currentQuestion));
     },
     addAnswer: (state, action: PayloadAction<{ idQuestion: string, idAnswersUser: string[] }>) => {
-      const indexAnswer = state.allAnswersUser?.findIndex((answer) => answer.idQuestion === action.payload.idQuestion);
-      if (state.allAnswersUser && indexAnswer !== undefined && indexAnswer !== -1) {
-        state.allAnswersUser[indexAnswer] = {
-          IdAnswersUser: action.payload.idAnswersUser,
+      const indexAnswer = state.userAnswers?.findIndex((answer) => answer.idQuestion === action.payload.idQuestion);
+      if (state.userAnswers && indexAnswer !== undefined && indexAnswer !== -1) {
+        state.userAnswers[indexAnswer] = {
+          idAnswers: action.payload.idAnswersUser,
           idQuestion: action.payload.idQuestion,
         };
         localStorage.setItem('userAnswers', JSON.stringify(state.userAnswers));

@@ -13,4 +13,4 @@ export const rootReducers = combineReducers({
   authModal: authModalReducer,
   comments: commentsReducer,
   user: userReducer,
-};
+});
