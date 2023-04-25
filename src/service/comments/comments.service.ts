@@ -1,5 +1,5 @@
 import { axiosPrivate } from '../../api/interceptors';
-import { getAllComments, getAllTopics, getCommentsByTopicId } from '../../constants/serverPath';
+import { getAllComments, getCommentsByTopicId } from '../../constants/serverPath';
 import { ICommentsStateElement } from '../../store/comments/comments.interface';
 import { IComment } from '../../types/topic.types';
 

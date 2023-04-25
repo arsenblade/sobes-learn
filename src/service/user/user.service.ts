@@ -1,11 +1,9 @@
 import { axiosPrivate } from '../../api/interceptors';
 import { getUserUrl, getUsersUrl } from '../../constants/serverPath';
-import { IUser } from '../../types/user.types';
-
-const uuid = require('uuid');
+import { IEditUserState } from '../../store/user/user.interface';
+import { IUpdateUser, IUser } from '../../types/user.types';
 
 export const userService = {
-
   async getAll() {
     const response = await axiosPrivate.get<IUser[]>(getUsersUrl());
 
@@ -18,8 +16,20 @@ export const userService = {
     return response;
   },
 
-  async updateUser(id: string, email: string, password: string, name: string) {
-    const response = await axiosPrivate.patch<IUser>(getUserUrl(id), { email, password, name });
+  async updateUser(updatedUser: IEditUserState) {
+    const response = await axiosPrivate.patch<IUser>(getUserUrl(updatedUser.id), updatedUser);
+
+    return response;
+  },
+
+  async changeBanStatus(id: string, isBanned: boolean) {
+    const response = await axiosPrivate.patch<IUser>(getUserUrl(id), { isBanned });
+
+    return response;
+  },
+
+  async deleteUser(id: string) {
+    const response = await axiosPrivate.delete<IUser>(getUserUrl(id));
 
     return response;
   },

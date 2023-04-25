@@ -1,11 +1,13 @@
 import { ComponentType } from 'react';
 import AdminCreateTopicPage from '../pages/Admin/AdminCreateTopic';
+import AdminEditUserPage from '../pages/Admin/AdminEditUser';
 import AdminStatisticsPage from '../pages/Admin/AdminStatistics';
+import AdminUsersListPage from '../pages/Admin/AdminUsers';
 import LoginPage from '../pages/Auth/login';
 import RegistrationPage from '../pages/Auth/registration';
 import MainPage from '../pages/MainPage';
 import Page404 from '../pages/Page404/Page404';
-import ProfileSettingsPage from '../pages/Profile/ProfileSettins';
+import ProfileSettingsPage from '../pages/Profile/ProfileSettings';
 import ProfileStatisticsPage from '../pages/Profile/ProfileStatistics';
 import TopicReactPage from '../pages/TopicsReact/TopicReact/TopicReact';
 import TopicsReactPage from '../pages/TopicsReact/TopicsReact';
@@ -27,6 +29,8 @@ enum Routes {
   TOPIC_TEST_ROUTE = '/topics/test/:idTest',
   MANAGE_STATISTICS_ROUTE = '/manage/statistics',
   MANAGE_CREATE_TOPIC_ROUTE = '/manage/create/topic',
+  MANAGE_EDIT_USERS = '/manage/users/list',
+  MANAGE_EDIT_USER = '/manage/user/:id',
   PAGE_404 = '*'
 }
 
@@ -84,5 +88,13 @@ export const adminRoutes: IRoute[] = [
   {
     path: Routes.MANAGE_CREATE_TOPIC_ROUTE,
     Component: AdminCreateTopicPage,
+  },
+  {
+    path: Routes.MANAGE_EDIT_USERS,
+    Component: AdminUsersListPage,
+  },
+  {
+    path: Routes.MANAGE_EDIT_USER,
+    Component: AdminEditUserPage,
   },
 ];

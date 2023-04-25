@@ -1,0 +1,47 @@
+@import "../../../styles/variables.scss";
+
+.searchInputLabel {
+  padding: 0;
+  margin: 0;
+  font-size: 36px;
+  position: relative;
+
+  >img {
+    left: -30px;
+    top: 45%;
+    position: absolute;
+    width: 18px;
+    height: auto;
+  }
+}
+
+.searchInput {
+  padding: 10px 40px 10px 12px;
+  outline: none;
+  outline-offset: 0;
+  background-color: #222;
+  border: 0;
+  font-size: 18px;
+  cursor: text;
+  border-bottom: 2px solid $pink;
+  color: white;
+
+  &:focus {
+    border-bottom: 2px solid white;
+
+    .searchInputLabel {
+      >p {
+        color: red;
+      }
+    }
+  }
+
+  &:hover {
+    background-color: #333;
+    border-bottom: 2px solid white;
+  }
+
+  &::placeholder {
+    color: grey;
+  }
+}
