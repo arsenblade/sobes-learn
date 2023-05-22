@@ -1,9 +1,9 @@
 import { axiosPublic } from '../../api/interceptors';
 import {
-  getLoginUrl, getRegisterUrl, getUsersUrl, getUserUrl,
+  getLoginUrl, getRegisterUrl, getUsersUrl,
 } from '../../constants/serverPath';
 import { IUser } from '../../types/user.types';
-import { dateToString } from '../../utils/dateToString';
+import { dateToString } from '../../utils/dateParsers';
 import { removeTokenStorage, saveTokenStorage } from './auth.helpers';
 
 const uuid = require('uuid');

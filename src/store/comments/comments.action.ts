@@ -1,12 +1,11 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import { commentsService } from '../../service/comments/comments.service';
-import { IComment } from '../../types/topic.types';
-import { dateToString } from '../../utils/dateToString';
-import { IAddComment, ICommentsStateElement } from './comments.interface';
+import { IComment, IRank } from '../../types/topic.types';
+import { IAddComment, ICommentsRanks, ICommentsStateElement } from './comments.interface';
 
 const { v4: uuidv4 } = require('uuid');
 
-export const addComment = createAsyncThunk<ICommentsStateElement, IAddComment>(
+export const addComment = createAsyncThunk<ICommentsRanks, IAddComment>(
   'add comment',
   async ({
     userId, username, text, topicId, parentId,
@@ -16,14 +15,26 @@ export const addComment = createAsyncThunk<ICommentsStateElement, IAddComment>(
       const newComment: IComment = {
         id: uuidv4(),
         userId,
-        pubDate: dateToString(date),
+        pubDate: date.toISOString(),
         username,
         commentText: text,
         replies: [],
         parentId: parentId ?? '',
       };
-      const response = await commentsService.addComment(newComment, topicId);
-      return response;
+      const responseData = await commentsService.addComment(newComment, topicId);
+      return responseData;
+    } catch (error) {
+      return thunkApi.rejectWithValue(error);
+    }
+  },
+);
+
+export const deleteComment = createAsyncThunk<ICommentsRanks, {commentId: string, topicId: string, parentId?: string}>(
+  'delete comment',
+  async ({ commentId, topicId, parentId }, thunkApi) => {
+    try {
+      const responseData = await commentsService.deleteComment(commentId, topicId, parentId);
+      return responseData;
     } catch (error) {
       return thunkApi.rejectWithValue(error);
     }
@@ -47,6 +58,30 @@ export const getAllComments = createAsyncThunk<ICommentsStateElement[]>(
   async (_, thunkApi) => {
     try {
       const response = await commentsService.getAllComments();
+      return response.data;
+    } catch (error) {
+      return thunkApi.rejectWithValue(error);
+    }
+  },
+);
+
+export const getAllRanks = createAsyncThunk<IRank[]>(
+  'get all ranks',
+  async (_, thunkApi) => {
+    try {
+      const response = await commentsService.getAllRanks();
+      return response.data;
+    } catch (error) {
+      return thunkApi.rejectWithValue(error);
+    }
+  },
+);
+
+export const rankComment = createAsyncThunk<IRank, IRank>(
+  'rank comment',
+  async (rank, thunkApi) => {
+    try {
+      const response = await commentsService.rankComment(rank);
       return response.data;
     } catch (error) {
       return thunkApi.rejectWithValue(error);

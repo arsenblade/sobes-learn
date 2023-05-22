@@ -655,193 +655,169 @@
       "id": "topic1-comments",
       "comments": [
         {
-          "id": "5fde4514-3df6-6fb6-8291-5f4c4cedf9a1",
-          "userId": "4fde4514-0df8-5fa6-8293-5f3c3cedf8b2",
-          "pubDate": "20-11-2022",
-          "username": "imaginator",
-          "commentText": "Я бы больше заострил внимание на конкурентах реакту",
-          "replies": [
-            {
-              "id": "19ffa64c-2191-4573-a977-be7127bab09f",
-              "userId": "1",
-              "pubDate": "19-03-2023",
-              "username": "Yen",
-              "commentText": "asdasdasd",
-              "replies": [],
-              "parentId": "5fde4514-3df6-6fb6-8291-5f4c4cedf9a1"
-            },
-            {
-              "id": "2e05f1e7-9d10-4fc9-ac85-7149afe8bac6",
-              "userId": "1",
-              "pubDate": "19-03-2023",
-              "username": "Yen",
-              "commentText": "qwsdkosdkgods",
-              "replies": [],
-              "parentId": "5fde4514-3df6-6fb6-8291-5f4c4cedf9a1"
-            },
-            {
-              "id": "10969778-6595-4f76-b569-3028128e7514",
-              "userId": 1,
-              "pubDate": "26-03-2023",
-              "username": "Arsen",
-              "commentText": "fbfdbfdbdfbdbdfbdfbdfbdbdfbdb",
-              "replies": [],
-              "parentId": "5fde4514-3df6-6fb6-8291-5f4c4cedf9a1"
-            }
-          ]
-        },
-        {
-          "id": "5fde4514-2df5-6fb6-9392-5f4c4cedf9a1",
-          "userId": "4fde4514-0df8-5fa6-8293-5f3c3cedf8b2",
-          "pubDate": "20-11-2022",
-          "username": "imaginator",
-          "commentText": "Я бы больше заострил внимание на конкурентах реакту",
-          "replies": [
-            {
-              "id": "1cb2b96b-7c31-41f1-9499-0c5bda2d1051",
-              "userId": "1",
-              "pubDate": "19-03-2023",
-              "username": "Yen",
-              "commentText": "ЗБС",
-              "replies": [],
-              "parentId": "5fde4514-2df5-6fb6-9392-5f4c4cedf9a1"
-            }
-          ]
-        },
-        {
-          "id": "4fde4514-0df9-6fс5-9291-5f3c3cedf9a1",
-          "userId": "4fde4514-0df9-5fa6-8291-4f3c3cedf9b1",
-          "pubDate": "18-11-2022",
-          "username": "holaynav",
-          "commentText": "Слишком много воды. Структуризируйте и скоратите информацию!",
-          "replies": []
-        },
-        {
-          "id": "be378dea-fc93-47d8-86ad-ffb8aca9e83a",
+          "id": "eea4fd57-34b6-49ec-99ed-85cae752184a",
           "userId": "1",
-          "pubDate": "21-03-2023",
-          "username": "Yen",
-          "commentText": "КАКОЙ КЛАССНЫЙ УРОК. ЭТО ЛУЧШЕЕ ЧТО Я ВИДЕЛ. Я СТАЛ СЕНЬОРОМ ЗА 3 МИНУТЫ. IBM и YANDEX ПЫТАЮТСЯ ПРОБИТЬ МОЮ ЛИЧКУ",
-          "replies": [],
-          "parentId": ""
-        },
-        {
-          "id": "be462d59-d9ee-4f7e-8907-f2b6c8f8e6ef",
-          "userId": 1,
-          "pubDate": "26-03-2023",
-          "username": "Arsen",
-          "commentText": "rgrgrgrrgrgrgrgrgrgrgrgrgrgrrrgr",
-          "replies": [],
-          "parentId": ""
-        },
-        {
-          "id": "37e46264-10ef-4760-b7c2-d20aafe869ed",
-          "userId": "1",
-          "pubDate": "28-03-2023",
+          "pubDate": "2023-05-20T19:01:31.723Z",
           "username": "Yen134",
-          "commentText": "Пушка гонка",
+          "commentText": "Урок классный, информация полезная!",
           "replies": [
             {
-              "id": "d331cef5-1c80-4edf-a9ad-50a3627c6442",
+              "id": "b500a79e-e14d-4a41-876d-d0fe096c1079",
               "userId": "1",
-              "pubDate": "28-03-2023",
+              "pubDate": "2023-05-20T21:00:05.336Z",
               "username": "Yen134",
-              "commentText": "не согласен",
+              "commentText": "А я не согласен)))",
               "replies": [],
-              "parentId": "37e46264-10ef-4760-b7c2-d20aafe869ed"
+              "parentId": "eea4fd57-34b6-49ec-99ed-85cae752184a"
+            },
+            {
+              "id": "a150b26a-c31d-4435-83fe-a2220cd69681",
+              "userId": "1",
+              "pubDate": "2023-05-20T21:00:22.040Z",
+              "username": "Yen134",
+              "commentText": "Полностью согласен",
+              "replies": [],
+              "parentId": "eea4fd57-34b6-49ec-99ed-85cae752184a"
             }
           ],
           "parentId": ""
         },
         {
-          "id": "226b4262-1a0a-4e03-9fb1-f86d274ef76e",
+          "id": "f8e0a1a2-5065-4701-baf6-564abe75e65c",
           "userId": "1",
-          "pubDate": "1-04-2023",
+          "pubDate": "2023-05-20T19:20:12.044Z",
           "username": "Yen134",
-          "commentText": "все супер",
+          "commentText": "Много нового узнал!",
           "replies": [],
+          "parentId": ""
+        },
+        {
+          "id": "37632a3c-5edc-45ab-96cb-5dbbdf17a161",
+          "userId": "1",
+          "pubDate": "2023-05-22T18:07:56.013Z",
+          "username": "Yen134",
+          "commentText": "Подчеркнул для себЯ много нового",
+          "replies": [],
+          "parentId": ""
+        },
+        {
+          "id": "5e78c92b-2a5b-45de-8483-cbbaf325dabf",
+          "userId": "1",
+          "pubDate": "2023-05-22T22:07:22.959Z",
+          "username": "Yen134",
+          "commentText": "Круто!",
+          "replies": [],
+          "parentId": ""
+        },
+        {
+          "id": "fc3f2b33-d94b-4e36-a91f-dcfbf1cf8034",
+          "userId": "1",
+          "pubDate": "2023-05-22T22:38:40.638Z",
+          "username": "Yen134",
+          "commentText": "прикольна",
+          "replies": [
+            {
+              "id": "1e335fe1-a2ca-451e-95ee-4cd0978698cc",
+              "userId": "1",
+              "pubDate": "2023-05-22T22:45:59.110Z",
+              "username": "Yen134",
+              "commentText": "сыглы",
+              "replies": [],
+              "parentId": "fc3f2b33-d94b-4e36-a91f-dcfbf1cf8034"
+            }
+          ],
           "parentId": ""
         }
       ]
     },
     {
       "id": "topic2-comments",
-      "comments": [
-        {
-          "id": "5fde4514-2df4-5cb6-9392-5f4c4cedf9a1",
-          "userId": "4fde4514-0df8-5fa6-8293-5f3c3cedf8b2",
-          "pubDate": "20-11-2022",
-          "username": "imaginator",
-          "commentText": "Я бы больше заострил внимание на конкурентах реакту",
-          "replies": []
-        },
-        {
-          "id": "4dda4514-0df9-5fb6-9291-5f3c3cedf9a1",
-          "userId": "4fde4514-0df9-5fa6-8291-4f3c3cedf9b1",
-          "pubDate": "18-11-2022",
-          "username": "holaynav",
-          "commentText": "Отличный познавательный урок!",
-          "replies": [
-            {
-              "id": "d2c66ef9-bc73-440a-a020-6de65130b511",
-              "userId": "1",
-              "pubDate": "19-03-2023",
-              "username": "Yen",
-              "commentText": "Трудно не согласиться",
-              "replies": [],
-              "parentId": "4dda4514-0df9-5fb6-9291-5f3c3cedf9a1"
-            }
-          ]
-        },
-        {
-          "id": "6937cba2-c247-4975-85c5-c43d2a6754cd",
-          "userId": "1",
-          "pubDate": "20-03-2023",
-          "username": "Yen",
-          "commentText": "Новый независимый комментарий",
-          "replies": [],
-          "parentId": ""
-        },
-        {
-          "id": "ebfd0ba3-472d-422a-912d-041f5b5ba254",
-          "userId": "1",
-          "pubDate": "20-03-2023",
-          "username": "Yen",
-          "commentText": "Новый независимый комментарий",
-          "replies": [],
-          "parentId": ""
-        },
-        {
-          "id": "7e29588e-3a97-48ed-9012-95a6ce05ca42",
-          "userId": "1",
-          "pubDate": "20-03-2023",
-          "username": "Yen",
-          "commentText": "Классно!",
-          "replies": [],
-          "parentId": ""
-        }
-      ]
+      "comments": []
     },
     {
       "id": "topic3-comments",
       "comments": [
         {
-          "id": "5fde4514-2df4-5cb6-9392-5f4c4cedf9a1",
-          "userId": "4fde4514-0df8-5fa6-8293-5f3c3cedf8b2",
-          "pubDate": "10-11-2022",
-          "username": "imaginator",
-          "commentText": "Я бы больше заострил внимание на конкурентах реакту",
-          "replies": []
-        },
-        {
-          "id": "6dda4514-0df9-5fb6-9282-5f3c3cedf9a1",
-          "userId": "4fde4514-0df9-5fa6-8291-4f3c3cedf9b1",
-          "pubDate": "18-11-2022",
-          "username": "holaynav",
-          "commentText": "Отличный познавательный урок!",
-          "replies": []
+          "id": "0cf60958-f2eb-47bc-851b-90a7bce18cec",
+          "userId": "1",
+          "pubDate": "2023-05-22T19:01:16.979Z",
+          "username": "Yen134",
+          "commentText": "Замечательно!",
+          "replies": [],
+          "parentId": ""
         }
       ]
+    }
+  ],
+  "commentsRank": [
+    {
+      "id": "eea4fd57-34b6-49ec-99ed-85cae752184a",
+      "dislikes": [],
+      "likes": [
+        {
+          "id": "1"
+        }
+      ]
+    },
+    {
+      "id": "f8e0a1a2-5065-4701-baf6-564abe75e65c",
+      "dislikes": [],
+      "likes": [
+        {
+          "id": "1"
+        }
+      ]
+    },
+    {
+      "id": "b500a79e-e14d-4a41-876d-d0fe096c1079",
+      "dislikes": [],
+      "likes": [
+        {
+          "id": "1"
+        }
+      ]
+    },
+    {
+      "id": "a150b26a-c31d-4435-83fe-a2220cd69681",
+      "dislikes": [],
+      "likes": [
+        {
+          "id": "1"
+        }
+      ]
+    },
+    {
+      "id": "37632a3c-5edc-45ab-96cb-5dbbdf17a161",
+      "dislikes": [
+        {
+          "id": "1"
+        }
+      ],
+      "likes": []
+    },
+    {
+      "id": "0cf60958-f2eb-47bc-851b-90a7bce18cec",
+      "dislikes": [],
+      "likes": []
+    },
+    {
+      "id": "5e78c92b-2a5b-45de-8483-cbbaf325dabf",
+      "dislikes": [],
+      "likes": [
+        {
+          "id": "1"
+        }
+      ]
+    },
+    {
+      "id": "fc3f2b33-d94b-4e36-a91f-dcfbf1cf8034",
+      "dislikes": [],
+      "likes": []
+    },
+    {
+      "id": "1e335fe1-a2ca-451e-95ee-4cd0978698cc",
+      "dislikes": [],
+      "likes": []
     }
   ]
 }

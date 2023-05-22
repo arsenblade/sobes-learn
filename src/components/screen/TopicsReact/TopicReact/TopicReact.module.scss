@@ -10,6 +10,51 @@
   margin-bottom: 50px;
   min-height: 860px;
 
+  .sortSection {
+    display: flex;
+    align-items: center;
+
+    >p {
+      margin-right: 24px;
+      padding: 0;
+      font-size: 24px;
+    }
+
+    @media (max-width: $mobileOnlyWidth) {
+      flex-direction: column;
+
+      >p {
+        font-size: 20px;
+      }
+    }
+
+    .sortButtons {
+      display: flex;
+      justify-content: center;
+
+      >:nth-child(1) {
+        margin-right: 24px;
+      }
+
+      .sortButton {
+        @media (max-width: $mobileOnlyWidth) {
+          font-size: 18px;
+        }
+
+        padding: 0;
+        cursor: pointer;
+        font-size: 24px;
+        background: transparent;
+        border: none;
+        color: white;
+      }
+
+      .sortButtonActive {
+        color: $pink;
+      }
+    }
+  }
+
   @media (max-width: 1350px) {
     min-height: 810px;
   }
@@ -253,8 +298,7 @@
 }
 
 .commentsContainer {
-  margin: 0 auto;
-  margin-bottom: 20px;
+  margin: 0 auto 20px;
 
   > h1 {
     font-size: 40px;
@@ -273,6 +317,7 @@
 
   .showFormButton {
     font-size: 30px;
+    margin-bottom: 10px;
     height: 60px;
     width: 400px;
 
