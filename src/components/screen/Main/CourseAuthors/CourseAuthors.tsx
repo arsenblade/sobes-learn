@@ -6,7 +6,7 @@ const authorsImg = require('../../../../assets/img/author-img.png');
 
 const courseAuthorsAnimation = {
   hidden: {
-    y: 100,
+    y: 20,
     opacity: 0,
   },
   visible: {
@@ -16,60 +16,58 @@ const courseAuthorsAnimation = {
 };
 
 const CourseAuthors = () => (
-  <section className={styles.container}>
-    <div className={styles.courseAuthors}>
-      <motion.h2
-        className={styles.title}
+  <div className={styles.courseAuthors}>
+    <motion.h2
+      className={styles.title}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ amount: 0.2, once: true }}
+      variants={courseAuthorsAnimation}
+    >
+      Авторы курса
+    </motion.h2>
+    <div className={styles.authorContainer}>
+      <motion.div
+        className={styles.author}
         initial="hidden"
         whileInView="visible"
-        viewport={{ amount: 0.4, once: true }}
+        viewport={{ amount: 0.2, once: true }}
         variants={courseAuthorsAnimation}
       >
-        Авторы курса
-      </motion.h2>
-      <div className={styles.authorContainer}>
-        <motion.div
-          className={styles.author}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ amount: 0.4, once: true }}
-          variants={courseAuthorsAnimation}
-        >
-          <img className={styles.img} width={200} height={200} src={authorsImg} alt="Фото автора." />
-          <div className={styles.contentText}>
-            <h3 className={styles.name}>Петр</h3>
-            <p className={styles.description}>Лучший прогер этой галактики</p>
-          </div>
-        </motion.div>
-        <motion.div
-          className={styles.author}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ amount: 0.4, once: true }}
-          variants={courseAuthorsAnimation}
-        >
-          <img className={styles.img} width={200} height={200} src={authorsImg} alt="Фото автора." />
-          <div className={styles.contentText}>
-            <h3 className={styles.name}>Петр</h3>
-            <p className={styles.description}>Лучший прогер этой галактики</p>
-          </div>
-        </motion.div>
-        <motion.div
-          className={styles.author}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ amount: 0.4, once: true }}
-          variants={courseAuthorsAnimation}
-        >
-          <img className={styles.img} width={200} height={200} src={authorsImg} alt="Фото автора." />
-          <div className={styles.contentText}>
-            <h3 className={styles.name}>Петр</h3>
-            <p className={styles.description}>Лучший прогер этой галактики</p>
-          </div>
-        </motion.div>
-      </div>
+        <img className={styles.img} width={200} height={200} src={authorsImg} alt="Фото автора." />
+        <div className={styles.contentText}>
+          <h3 className={styles.name}>Петр</h3>
+          <p className={styles.description}>Лучший прогер этой галактики</p>
+        </div>
+      </motion.div>
+      <motion.div
+        className={styles.author}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ amount: 0.2, once: true }}
+        variants={courseAuthorsAnimation}
+      >
+        <img className={styles.img} width={200} height={200} src={authorsImg} alt="Фото автора." />
+        <div className={styles.contentText}>
+          <h3 className={styles.name}>Петр</h3>
+          <p className={styles.description}>Лучший прогер этой галактики</p>
+        </div>
+      </motion.div>
+      <motion.div
+        className={styles.author}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ amount: 0.2, once: true }}
+        variants={courseAuthorsAnimation}
+      >
+        <img className={styles.img} width={200} height={200} src={authorsImg} alt="Фото автора." />
+        <div className={styles.contentText}>
+          <h3 className={styles.name}>Петр</h3>
+          <p className={styles.description}>Лучший прогер этой галактики</p>
+        </div>
+      </motion.div>
     </div>
-  </section>
+  </div>
 );
 
 export default CourseAuthors;

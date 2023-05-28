@@ -4,21 +4,8 @@
   width: 100%;
   padding: 40px;
 
-  @media (max-width: 650px) {
-    width: 650px;
-  }
-
   @media (max-width: 600px) {
     width: 100%;
-  }
-
-  @media (max-width: 460px) {
-    width: 460px;
-  }
-
-  @media (max-width: $mobileOnlyWidth) {
-    width: 100%;
-    padding: 20px;
   }
 
   @media (max-width: 380px) {
@@ -95,7 +82,7 @@
     height: 85px;
   }
 
-  >img {
+  >svg {
     width: 45px;
     height: 45px;
 

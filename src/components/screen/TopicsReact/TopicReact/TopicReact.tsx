@@ -62,6 +62,7 @@ const TopicReact = () => {
       navigate(`/topics/react/${backTopic.id}`);
     }
   };
+  console.log(imgUrl);
 
   return (
     <div className={styles.topicReact}>

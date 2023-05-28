@@ -1,27 +1,43 @@
 @import "../../../../styles/variables.scss";
 
 .logo {
-  @media (max-width: $tabletWidth) {
-    width: 800px;
-    margin: 0 auto;
-    padding: 0 20px;
+  display: flex;
+  align-items: center;
+  column-gap: 15px;
+  transition: 0.3s;
+
+  &:hover {
+    > svg {
+      fill: $violet;
+    }
+
+    > span {
+      color: $violet
+    }
   }
 
-  @media (max-width: 800px) {
-    width: 640px;
-    margin: 0 auto;
-    padding: 0 20px;
+  > svg {
+    fill: $pink;
+    transition: 0.3s;
   }
 
-  @media (max-width: 600px) {
-    width: 460px;
-    margin: 0 auto;
-    padding: 0 20px;
+  > span {
+    color: $pink;
+    font-size: $firstHeader;
+    font-weight: 600;
+    transition: 0.3s;
   }
+}
 
-  @media (max-width: $mobileOnlyWidth) {
-    width: 380px;
-    margin: 0 auto;
-    padding: 0 10px;
+@media (max-width: 600px) {
+  .logo {
+    > svg {
+      width: 100px;
+      height: 100px;
+    }
+
+    > span {
+      display: none;
+    }
   }
 }

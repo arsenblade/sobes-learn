@@ -6,7 +6,7 @@ const projectVideo = require('../../../../assets/videos/first-class.mp4');
 
 const personalProjectAnimation = {
   hidden: {
-    y: 100,
+    y: 20,
     opacity: 0,
   },
   visible: {
@@ -22,7 +22,7 @@ const PersonalProject = () => (
         className={styles.textContent}
         initial="hidden"
         whileInView="visible"
-        viewport={{ amount: 0.4, once: true }}
+        viewport={{ amount: 0.2, once: true }}
         variants={personalProjectAnimation}
       >
         <h2 className={styles.title}>Личный проект</h2>
@@ -32,7 +32,7 @@ const PersonalProject = () => (
         className={styles.videos}
         initial="hidden"
         whileInView="visible"
-        viewport={{ amount: 0.4, once: true }}
+        viewport={{ amount: 0.2, once: true }}
         variants={personalProjectAnimation}
         width={568}
         height={320}

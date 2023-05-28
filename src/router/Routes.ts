@@ -20,6 +20,7 @@ interface IRoute {
 
 enum Routes {
   MAIN_ROUTE = '/',
+  ABOUT_COURSE_ROUTE = '/about/course',
   LOGIN_ROUTE = '/login',
   REGISTRATION_ROUTE = '/registration',
   PROFILE_SETTINGS_ROUTE = '/profile/settings',

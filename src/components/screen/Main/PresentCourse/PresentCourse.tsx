@@ -1,13 +1,16 @@
-import React, { FC, MutableRefObject } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 import Button from '../../../ui/Button/Button';
 import styles from './PresentCourse.module.scss';
+import useWindowDimensions from '../../../../hooks/useWindowDimensions';
+import useMediaQuery from '../../../../hooks/useMediaQuery';
 
-const logo = require('../../../../assets/img/programmist.jpg');
+const imgDeveloperDesktop = require('../../../../assets/img/developer-desktop.jpg');
+const imgDeveloperMobile = require('../../../../assets/img/developer-mobile.jpg');
 
 const presentAnimation = {
   hidden: {
-    y: 100,
+    y: 20,
     opacity: 0,
   },
   visible: {
@@ -16,26 +19,35 @@ const presentAnimation = {
   },
 };
 
-const PresentCourse = () => (
-  <motion.section
-    className={styles.presentCourse}
-    initial="hidden"
-    whileInView="visible"
-    viewport={{ amount: 0.2, once: true }}
-  >
-    <motion.div className={styles.infoCourse} variants={presentAnimation}>
-      <span className={styles.clarification}>Онлайн курс</span>
-      <h1 className={styles.title}>Реакт – разработчик</h1>
-      <p className={styles.description}>
-        Освойте в асинхронном режиме навыки, необходимые для реакт-разработчика. Научитесь применять востребованные технологии и глубже разберитесь
-        в&nbsp;том&nbsp;,&nbsp;как&nbsp;всё устроено.
-      </p>
-      <a href="#ourProgram">
-        <Button className={styles.btn} color="Pink">Подробнее</Button>
-      </a>
-    </motion.div>
-    <motion.img className={styles.img} variants={presentAnimation} width={559} height={405} src={logo} alt="Картинка программиста." />
-  </motion.section>
-);
+const PresentCourse = () => {
+  const isTabletScreen = useMediaQuery('(max-width: 950px)');
+
+  return (
+    <motion.section
+      className={styles.presentCourse}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ amount: 0.2, once: true }}
+    >
+      <motion.div className={styles.infoCourse} variants={presentAnimation}>
+        <h1 className={styles.title}>Помогаем пройти собеседование на Frontend-разработчика</h1>
+        <p className={styles.description}>
+          Освойте в асинхронном режиме навыки, необходимые для собеседования на должность Frontend разработчика. Научитесь решать алгоритмиические задачи и грамотно отвечать на технические вопросы.
+        </p>
+        <a href="#ourProgram">
+          <Button className={styles.btn} color="Pink">Подробнее</Button>
+        </a>
+      </motion.div>
+
+      {!isTabletScreen ? (
+        <img className={styles.img} width={355} height={420} src={imgDeveloperDesktop} alt="Картинка программиста." />
+      ) : null}
+
+      {isTabletScreen ? (
+        <img className={styles.img} src={imgDeveloperMobile} alt="Картинка программиста." />
+      ) : null}
+    </motion.section>
+  );
+};
 
 export default PresentCourse;

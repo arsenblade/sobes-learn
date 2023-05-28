@@ -264,3 +264,35 @@ a {
     opacity: 0;
   }
 }
+
+.info-circle-exit-active {
+  animation: info-circle-animation 0.5s forwards;
+}
+
+@keyframes info-circle-animation {
+  0% {
+    opacity: 1;
+    transform: translateY(0) rotate(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(30px) rotate(360deg);
+  }
+}
+
+.accordion-enter-active {
+  animation: accordion-enter-animation 0.5s forwards;
+}
+
+@keyframes accordion-enter-animation {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
