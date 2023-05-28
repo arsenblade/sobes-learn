@@ -1,70 +1,191 @@
 @import "../../../../../../styles/variables.scss";
 
 .comment {
+  position: relative;
+  width: 100%;
   align-items: flex-start;
+  margin-right: 30px;
   display: flex;
   justify-content: left;
-  margin-top: 30px;
+  margin-top: 20px;
 
   .commentUserAvatar {
-    width: 70px;
-    height: 70px;
-    border-radius: 5px;
-  }
-}
+    width: 100px;
+    height: 100px;
+    border-radius: 24px;
 
-.commentMainInfo {
-  margin-left: 20px;
-
-  > p {
-    margin: 15px 0 0;
-    padding: 0;
-    font-size: 16px;
-  }
-}
-
-.commentOuterContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: left;
-  justify-content: space-between;
-}
-
-.commentInnerContainer {
-  height: 75px;
-  display: flex;
-  flex-direction: column;
-  align-items: left;
-  justify-content: space-around;
-
-  > {
-    p {
-      padding: 0;
-      margin: 0;
-      font-size: 16px;
-    }
-
-    h2 {
-      padding: 0;
-      margin: 0;
-      font-size: 20px;
+    @media (max-width: $mobileOnlyWidth) {
+      width: 70px;
+      height: 70px;
+      border-radius: 18px;
     }
   }
 
-  border-bottom: 2px solid $darkGreyUnderline;
-}
+  .deleteHover {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    z-index: 5;
+    top: 0;
+    right: 0;
+    padding: 10px 20px;
+    height: 100px;
+    width: 100%;
+    background: linear-gradient(to right, rgb(0 0 0 / 0%) 93%, rgb(255 68 180 / 30%) 98%);
+    opacity: 0;
 
-.buttonReply {
-  width: 50px;
-  cursor: pointer;
-  margin: 10px 0 0;
-  padding: 0;
-  font-size: 20px;
-  background: transparent;
-  color: $pink;
-  border: none;
+    &:hover {
+      opacity: 1;
+    }
 
-  &:hover {
-    text-decoration: underline;
+    >button {
+      cursor: pointer;
+      width: 25px;
+      height: 25px;
+      background: transparent;
+      border: none;
+
+      >img {
+        width: 25px;
+        height: 25px;
+      }
+    }
+  }
+
+  .deleteHoverRemoved {
+    opacity: 0;
+  }
+
+  .commentMainInfo {
+    margin-left: 20px;
+    width: 75%;
+
+    .commentTitleDate {
+      display: flex;
+      align-items: flex-start;
+
+      .commentUsername {
+        margin: 0;
+        font-size: 32px;
+
+        @media (max-width: $mobileOnlyWidth) {
+          font-size: 28px;
+        }
+      }
+
+      .commentDate {
+        margin: 0.4em 0 0 20px;
+        padding: 0;
+        font-size: 20px;
+
+        @media (max-width: $mobileOnlyWidth) {
+          font-size: 16px;
+        }
+      }
+    }
+
+    .commentText {
+      font-size: 22px;
+
+      @media (max-width: $mobileOnlyWidth) {
+        font-size: 16px;
+      }
+    }
+
+    .commentActiveBlock {
+      display: flex;
+      align-items: flex-start;
+      flex-direction: row;
+
+      .buttonReply {
+        cursor: pointer;
+        padding: 4px 12px;
+        font-size: 28px;
+        background: transparent;
+        color: white;
+        border: 3px solid $pink;
+        border-radius: 16px;
+
+        &:hover {
+          background-color: $pink;
+        }
+      }
+
+      @media (max-width: $mobileOnlyWidth) {
+        flex-direction: column;
+        width: 175px;
+        justify-content: space-between;
+
+        >.buttonReply {
+          border-radius: 12px;
+          font-size: 22px;
+        }
+      }
+
+      .commentActiveBlockRanks {
+        display: flex;
+        align-items: center;
+        margin-right: 16px;
+
+        > :nth-child(2) {
+          margin-right: 20px;
+        }
+
+        > span {
+          margin-left: 8px;
+          color: white;
+          font-size: 28px;
+          vertical-align: middle;
+          font-weight: bold;
+        }
+
+        @media (max-width: $mobileOnlyWidth) {
+          margin-bottom: 6px;
+
+          > span {
+            font-size: 18px;
+          }
+
+          margin-right: 0;
+        }
+
+        .commentRankButton {
+          padding: 0;
+          background: transparent;
+          border: none;
+          cursor: pointer;
+
+          > img {
+            @media (max-width: $mobileOnlyWidth) {
+              margin-bottom: 10px;
+              width: 30px;
+            }
+
+            margin: 4px;
+            width: 40px;
+            height: auto;
+          }
+        }
+
+        .commentRankButtonDisabled {
+          cursor: default;
+
+          > img {
+            opacity: 0.8;
+          }
+        }
+      }
+    }
+
+    .commentOuterContainer {
+      margin-top: 20px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding-left: 20px;
+      border-left: 3px solid $pink;
+    }
   }
 }

@@ -1,25 +1,34 @@
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
+
 import styles from './Comment.module.scss';
 import { IComment } from '../../../../../../types/topic.types';
 
 import CommentForm from '../CommentForm/CommentForm';
 import { useTypedSelector } from '../../../../../../hooks/useTypedSelector';
 import { useActions } from '../../../../../../hooks/useActions';
+import { useAuth } from '../../../../../../hooks/useAuth';
+import CommentRank from './CommentRank';
+import { stringToText } from '../../../../../../utils/dateParsers';
+import CommentHover from './CommentHover';
 
-const Comment = (comment: IComment) => {
-  const avatarUrl = require('../../../../../../assets/img/avatar.png');
+interface ICommentComponent {
+  comment: IComment,
+  userId: string | undefined;
+}
 
-  const [isFormActive, setIsFormActive] = useState(false);
+const Comment = ({ comment, userId } : ICommentComponent) => {
+  const avatarUrl = require('../../../../../../assets/img/avatar3.jpg');
 
+  const {
+    id, commentText, replies, pubDate, username,
+  } = comment;
   const { changeFormStatus } = useActions();
 
   const currentFormId = useTypedSelector((state) => state.comments.currentFormId);
+  const topicId = useTypedSelector((state) => state.comments.currentTopicComments.id);
+  const auth = useAuth();
 
-  const {
-    parentId, username, pubDate, commentText, replies, id,
-  } = comment;
-  const isReplyButtonShow = !parentId;
-
+  const [isFormActive, setIsFormActive] = useState(false);
   useEffect(() => {
     if (currentFormId === 'init') {
       return;
@@ -35,23 +44,27 @@ const Comment = (comment: IComment) => {
   };
 
   return (
-    <>
-      <div className={styles.comment}>
-        <img alt="user-avatar" src={avatarUrl} className={styles.commentUserAvatar} />
-        <div className={styles.commentMainInfo}>
-          <div className={styles.commentInnerContainer}>
-            <h2 className={styles.username}>{username}</h2>
-            <p className={styles.date}>{pubDate}</p>
+    <div className={styles.comment}>
+      <img alt="user-avatar" src={avatarUrl} className={styles.commentUserAvatar} />
+      <div className={styles.commentMainInfo}>
+        <div className={styles.commentTitleDate}>
+          <h2 className={styles.commentUsername}>{username}</h2>
+          <p className={styles.commentDate}>{stringToText(pubDate)}</p>
+        </div>
+        <p className={styles.commentText}>{commentText}</p>
+        <div className={styles.commentActiveBlock}>
+          <div className={styles.commentActiveBlockRanks}>
+            <CommentRank id={id} userId={userId} />
           </div>
-          <div className={styles.commentOuterContainer}>
-            <p>{commentText}</p>
-            {isReplyButtonShow ? <button className={styles.buttonReply} onClick={buttonReplyHandler}>Ответить</button> : ''}
-            {replies.map((comment) => <Comment {...comment} />)}
-          </div>
+          {comment.parentId === '' || !comment.parentId ? <button className={styles.buttonReply} onClick={buttonReplyHandler}>Ответить</button> : ''}
+        </div>
+        <div className={styles.commentOuterContainer}>
+          {isFormActive ? <CommentForm parentId={id} /> : ''}
+          {replies.map((comment) => <Comment comment={comment} userId={userId} />)}
         </div>
       </div>
-      {isFormActive ? <CommentForm parentId={id} /> : ''}
-    </>
+      {auth.user?.isAdmin ? <CommentHover commentId={comment.id} topicId={topicId} parentId={comment.parentId} /> : ''}
+    </div>
   );
 };
 

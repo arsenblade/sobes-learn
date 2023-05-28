@@ -3,7 +3,6 @@ import { useActions } from '../../../../../../hooks/useActions';
 import { useTypedSelector } from '../../../../../../hooks/useTypedSelector';
 import { IAddComment } from '../../../../../../store/comments/comments.interface';
 import Button from '../../../../../ui/Button/Button';
-import Textarea from '../../../../../ui/Textarea/Textarea';
 import styles from './CommentForm.module.scss';
 
 interface ICommentForm {
@@ -64,7 +63,7 @@ const CommentForm = ({ parentId }: ICommentForm) => {
     <div className={styles.commentForm}>
       <img alt="user-avatar" src={avatarUrl} className={styles.formAvatar} />
       <form className={styles.commentFormMainInfo} onSubmit={(e) => handleFormSubmit(e)}>
-        <Textarea placeholder="Введите текст" onChange={(e) => inputHandler(e)} className={styles.commentFormInput} />
+        <textarea placeholder="Оставьте свой комментарий здесь..." onChange={(e) => inputHandler(e)} className={styles.commentFormInput} />
         <span>{inputError}</span>
         <button className={styles.buttonContainer} disabled={isSubmitDisabled} type="submit">
           <Button className={styles.submitButton} color="Pink" disabled={isSubmitDisabled}>Отправить</Button>
