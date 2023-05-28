@@ -20,7 +20,7 @@
       "isAdmin": true,
       "pointTests": [],
       "regDate": "19.01.2022",
-      "isBanned": true
+      "isBanned": false
     },
     {
       "id": "23ayjvdbrte123aa52",
@@ -60,12 +60,12 @@
         {
           "idUser": 1,
           "idTest": "aa9f8e87-8ab0-401b-a25f-17662ac53665",
-          "points": 6
+          "points": 3
         },
         {
           "idUser": 1,
           "idTest": "f1315e00-c7fc-4789-b045-5e302fda1b14",
-          "points": 6
+          "points": 4
         }
       ],
       "regDate": "17.09.2022",
@@ -618,9 +618,9 @@
   "topicsOfStudy": [
     {
       "id": "4fde4514-0ac7-4ad6-8291-4f3c3cedf9b1",
-      "descriptionTopic": "Расскажем что такое React и как его использовать",
+      "descriptionTopic": "Разберем основные вопросы по HTML",
       "passedTopic": false,
-      "titleTopic": "Введение",
+      "titleTopic": "Вопросы по HTML",
       "numberTopic": 1,
       "relatedQuestionsId": "edeccac7-2c93-409f-82b1-2be1c8fe8777",
       "pictureTopicUrl": "react-poster.png",
@@ -629,9 +629,9 @@
     },
     {
       "id": "48fbf953-edf0-4588-ac37-17f3b062919b",
-      "descriptionTopic": "Расскажем что такое функциональные компоненты",
+      "descriptionTopic": "Разберем основные вопросы по CSS",
       "passedTopic": false,
-      "titleTopic": "Функциональные компоненты",
+      "titleTopic": "Вопросы по CSS",
       "numberTopic": 2,
       "relatedQuestionsId": "aa9f8e87-8ab0-401b-a25f-17662ac53665",
       "pictureTopicUrl": "react-poster.png",
@@ -640,9 +640,9 @@
     },
     {
       "id": "d3068e00-18c7-4046-990a-6c1351a8ec85",
-      "descriptionTopic": "Расскажем как пользоваться роутингом в React",
+      "descriptionTopic": "Разберем первую часть JS вопросов",
       "passedTopic": false,
-      "titleTopic": "Роутинг",
+      "titleTopic": "Вопросы по JavaScript. Часть 1",
       "numberTopic": 3,
       "relatedQuestionsId": "f1315e00-c7fc-4789-b045-5e302fda1b14",
       "pictureTopicUrl": "react-poster.png",
@@ -688,7 +688,17 @@
           "pubDate": "2023-05-20T19:20:12.044Z",
           "username": "Yen134",
           "commentText": "Много нового узнал!",
-          "replies": [],
+          "replies": [
+            {
+              "id": "e7a8c5a2-4c4a-4e4f-873e-cf92872d6ad9",
+              "userId": "1",
+              "pubDate": "2023-05-28T10:30:56.460Z",
+              "username": "Yen134",
+              "commentText": "ffwefwefwef",
+              "replies": [],
+              "parentId": "f8e0a1a2-5065-4701-baf6-564abe75e65c"
+            }
+          ],
           "parentId": ""
         },
         {
@@ -726,6 +736,15 @@
               "parentId": "fc3f2b33-d94b-4e36-a91f-dcfbf1cf8034"
             }
           ],
+          "parentId": ""
+        },
+        {
+          "id": "093eaf4b-8f5a-45b2-bd67-a24bd7b353ec",
+          "userId": "1",
+          "pubDate": "2023-05-28T10:31:02.896Z",
+          "username": "Yen134",
+          "commentText": "wefwfwefwefwef",
+          "replies": [],
           "parentId": ""
         }
       ]
@@ -816,6 +835,16 @@
     },
     {
       "id": "1e335fe1-a2ca-451e-95ee-4cd0978698cc",
+      "dislikes": [],
+      "likes": []
+    },
+    {
+      "id": "e7a8c5a2-4c4a-4e4f-873e-cf92872d6ad9",
+      "dislikes": [],
+      "likes": []
+    },
+    {
+      "id": "093eaf4b-8f5a-45b2-bd67-a24bd7b353ec",
       "dislikes": [],
       "likes": []
     }

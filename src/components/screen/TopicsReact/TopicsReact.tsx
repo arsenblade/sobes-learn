@@ -29,7 +29,9 @@ const TopicsReact = () => {
           {!topicsLoading && topicsData
           && (
           <div className={styles.loadingAnimation}>
-            <h1 className={styles.title}>Курс React – разработчик</h1>
+            <h1 className={styles.title}>Подготовка к собеседованию
+              на Frontend разработчика
+            </h1>
             <div className={styles.sliderDesktop}>
               <SliderTheme sliders={sortAllTopics || []} />
             </div>

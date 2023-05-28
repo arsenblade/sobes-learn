@@ -17,14 +17,14 @@ const AdminHeader = () => {
         >
           <span>Статистика</span>
         </Link>
-        <Link
-          className={cn(styles.link, styles.createTopic, {
-            [styles.currentActiveCreateTopic]: pathname === '/manage/create/topic',
-          })}
-          to="/manage/create/topic"
-        >
-          <span>Добавить темы</span>
-        </Link>
+        {/* <Link */}
+        {/*  className={cn(styles.link, styles.createTopic, { */}
+        {/*    [styles.currentActiveCreateTopic]: pathname === '/manage/create/topic', */}
+        {/*  })} */}
+        {/*  to="/manage/create/topic" */}
+        {/* > */}
+        {/*  <span>Добавить темы</span> */}
+        {/* </Link> */}
         <Link
           className={cn(styles.link, styles.userEditIcon, {
             [styles.currentActiveUserEdit]: pathname === '/manage/users/list',

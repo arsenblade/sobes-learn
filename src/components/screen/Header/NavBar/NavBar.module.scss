@@ -9,17 +9,9 @@
   z-index: 100;
 
   @media (max-width: $tabletWidth) {
-    width: 800px;
+    max-width: 800px;
     margin: 0 auto;
     padding: 0 20px;
-  }
-
-  @media (max-width: 800px) {
-    width: 640px;
-  }
-
-  @media (max-width: 600px) {
-    width: 460px;
   }
 
   @media (max-width: $mobileOnlyWidth) {
@@ -236,8 +228,8 @@
 
 .navToggle {
   position: absolute;
-  top: -80px;
-  right: 20px;
+  top: -70px;
+  right: 0;
   z-index: 2;
   width: 80px;
   height: 64px;
@@ -249,6 +241,10 @@
 
   @media (min-width: $tabletWidth) {
     display: none;
+  }
+
+  @media (max-width: 600px) {
+    top: -80px;
   }
 }
 
