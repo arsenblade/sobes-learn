@@ -1,26 +1,66 @@
 @import "../../../../../styles/variables.scss";
 
 .questionMap {
-  width: max-content;
+  position: fixed;
+  top: 0;
+  right: -240px;
   display: flex;
   flex-direction: column;
-  border: 5px solid $pink;
+  border: 4px solid $black;
   border-radius: 0.2em;
-  padding: 25px;
-  margin-left: auto;
-  margin-right: auto;
+  padding: 10px;
+  height: 100vh;
+  width: 240px;
+  background: black;
+  transition: 0.3s;
+  z-index: 99999;
+}
+
+.activeQuestionMap {
+  right: 0;
 }
 
 .questionMapText {
   margin: 0 auto 20px;
   width: max-content;
-  font-size: 35px;
+  font-size: 26px;
   text-align: center;
 }
 
 .questions {
   display: flex;
-  width: max-content;
-  margin-left: auto;
-  margin-right: auto;
+  column-gap: 14px;
+  row-gap: 6px;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.mapButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 300px;
+  left: -44px;
+  width: 40px;
+  height: 150px;
+  background: $pink;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  writing-mode: vertical-lr;
+  text-orientation: upright;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: 600;
+
+  &:hover {
+    background: white;
+    color: black;
+  }
+}
+
+@media (max-width: 600px) {
+  .questions {
+    row-gap: 10px;
+  }
 }

@@ -16,6 +16,8 @@
   display: inline-block;
   width: 1.2em;
   height: 1.2em;
+  min-width: 29px;
+  min-height: 29px;
   background-color: $beige;
   cursor: pointer;
   transition: 0.04s ease-in;

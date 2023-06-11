@@ -49,33 +49,10 @@
     }
 
     .title {
-      font-size: 50px;
+      font-size: $firstDescription;
 
-      @media (max-width: 1050px) {
-        font-size: 40px;
-      }
-
-      @media (max-width: 600px) {
-        font-size: 30px;
-      }
-
-      @media (max-width: $mobileOnlyWidth) {
-        font-size: 26px;
-      }
-    }
-
-    .numberTest {
-      font-size: 40px;
-      min-width: 150px;
-      margin-top: 8px;
-
-      @media (max-width: 1050px) {
-        font-size: 34px;
-      }
-
-      @media (max-width: 600px) {
-        font-size: 30px;
-        min-width: 100px;
+      & > span {
+        color: $violet;
       }
     }
   }
@@ -85,16 +62,8 @@
     flex-direction: column;
 
     .questions {
-      font-size: 40px;
+      font-size: $firstDescription;
       text-align: center;
-
-      @media (max-width: 1050px) {
-        font-size: 34px;
-      }
-
-      @media (max-width: 600px) {
-        font-size: 26px;
-      }
     }
 
     .answersContainer {
@@ -113,25 +82,7 @@
       }
 
       .answer {
-        font-size: 30px;
-
-        @media (max-width: 1050px) {
-          font-size: 26px;
-        }
-
-        @media (max-width: 950px) {
-          > p {
-            max-width: 90%;
-          }
-        }
-
-        @media (max-width: 600px) {
-          font-size: 22px;
-
-          > p {
-            max-width: 86%;
-          }
-        }
+        font-size: $secondDescription;
       }
     }
 
@@ -140,34 +91,50 @@
       justify-content: space-between;
       width: 100%;
 
-      @media (max-width: 600px) {
-        flex-direction: column;
+      .numberTest {
+        font-size: $firstDescription;
+        min-width: 150px;
+        margin-top: 8px;
+        text-align: center;
       }
 
       .btn {
-        height: 60px;
-        font-size: 30px;
-
-        @media (max-width: 800px) {
-          font-size: 26px;
-        }
+        width: 280px;
+        height: 66px;
+        font-size: $secondDescription;
       }
+    }
+  }
+}
 
-      .btnBack {
-        @media (max-width: 600px) {
-          width: 100%;
-          margin-bottom: 20px;
+
+@media (max-width: 800px) {
+  .topicTest {
+    .contentTest {
+      .containerBtn {
+        display: grid;
+        width: 100%;
+        grid-template-columns: 110px 1fr 110px;
+        row-gap: 20px;
+
+        .numberTest {
+          justify-self: center;
         }
-      }
 
-      .btnNext {
-        width: 340px;
-
-        @media (max-width: 800px) {
-          width: 300px;
+        .iconBack {
+          fill: $violet;
         }
 
-        @media (max-width: 600px) {
+        .iconNext {
+          fill: $pink;
+        }
+
+        .iconDisabled {
+          fill: gray;
+        }
+
+        .btn {
+          grid-column: 1 / -1;
           width: 100%;
         }
       }

@@ -1,25 +1,48 @@
 @import "../../../../../styles/variables.scss";
 
 .questionItem {
-  width: 60px;
-  height: 60px;
-  background-color: #292727;
-  align-items: center;
-  border: 2px solid $pink;
-  border-radius: 0.2em;
   display: flex;
-  margin-right: 14px;
+  align-items: flex-end;
+  justify-content: center;
+  width: 40px;
+  height: 55px;
+  padding: 2px 0;
+  background-color: #292727;
+  border-radius: 10px;
   cursor: pointer;
+  transition: 0.3s;
 
   &:last-child {
     margin-right: 0;
   }
 }
 
+.active {
+  background: $violet;
+
+  .questionNumber {
+    transform: translateY(-26px);
+    background: black;
+  }
+}
+
+.choose {
+  background: $pink;
+
+  .questionNumber {
+    transform: translateY(-26px);
+    background: black;
+  }
+}
+
 .questionNumber {
-  font-size: 30px;
-  margin-left: auto;
-  margin-right: auto;
+  display: block;
+  width: 38px;
+  text-align: center;
+  font-size: 18px;
+  border-radius: 10px;
+  border: 2px solid $black;
+  transition: 0.3s;
 }
 
 .questionItemCurrent {
@@ -30,4 +53,36 @@
 .questionItemComplete {
   background-color: $violet;
   border-color: $violet;
+}
+
+
+@media (max-width: 600px) {
+  .questionItem {
+    width: 60px;
+    height: 70px;
+    padding: 4px 0;
+
+    .questionNumber {
+      width: 58px;
+      font-size: 26px;
+    }
+  }
+
+  .active {
+    background: $violet;
+
+    .questionNumber {
+      transform: translateY(-28px);
+      background: black;
+    }
+  }
+
+  .choose {
+    background: $pink;
+
+    .questionNumber {
+      transform: translateY(-28px);
+      background: black;
+    }
+  }
 }

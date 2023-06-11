@@ -9,6 +9,8 @@ import { getCourseGraduates } from '../../../../utils/getCourseGraduates';
 import { getPercentTopicCovered } from '../../../../utils/getPercentTopicCovered';
 import StatisticsTable from '../../../ui/StatisticsTable/StatisticsTable';
 import styles from './AdminStatistics.module.scss';
+import {userTest} from '../../../../service/userTest/userTest.service';
+import {ITest} from '../../../../types/question.types';
 
 const adminAnimation = {
   hidden: {
@@ -35,18 +37,20 @@ const AdminStatistics = () => {
   const [countCoveredTopic, setCountCoveredTopic] = useState<IStatUser[]>([]);
   const [allUsers, setAllUsers] = useState<IUser[]>([]);
   const [allTopics, setAllTopics] = useState<ITopic[]>([]);
+  const [allTest, setAllTest] = useState<ITest[]>([]);
 
   useEffect(() => {
     getAllUsers();
     getAllTopics();
+    getAllTests();
   }, []);
 
   useEffect(() => {
-    if (allTopics.length > 0 && allUsers.length > 0) {
-      setAverageUsersScores(getAdminAverageScore(allUsers, allTopics));
+    if (allTopics.length > 0 && allUsers.length > 0 && allTest.length > 0) {
+      setAverageUsersScores(getAdminAverageScore(allUsers, allTopics, allTest));
       setCountCoveredTopic(getPercentTopicCovered(allUsers, allTopics));
     }
-  }, [allUsers, allTopics]);
+  }, [allUsers, allTopics, allTest]);
 
   async function getAllUsers() {
     const { data: userData } = await userService.getAll();
@@ -57,6 +61,11 @@ const AdminStatistics = () => {
     const { data: topicData } = await topicService.getAll();
     setAllTopics(topicData);
   }
+
+  const getAllTests = async () => {
+    const { data: allTest } = await userTest.getAll();
+    setAllTest(allTest);
+  };
 
   return (
     <div className={styles.adminStatistics}>
@@ -71,7 +80,7 @@ const AdminStatistics = () => {
           >
             Средние баллы пользователей за&nbsp;каждую&nbsp;тему
           </motion.h2>
-          <StatisticsTable data={averageUsersScores} color="pink" percent={false} />
+          <StatisticsTable data={averageUsersScores} color="pink" percent />
         </div>
         <div className={styles.graph}>
           <motion.h2

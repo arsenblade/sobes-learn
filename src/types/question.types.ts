@@ -12,7 +12,7 @@ export interface IQuestion {
 }
 
 export interface ITest {
-  idTest: string;
+  id: string;
   currentQuestion: IQuestion;
   questions: IQuestion[];
 }

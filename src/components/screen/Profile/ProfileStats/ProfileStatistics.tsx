@@ -12,6 +12,8 @@ import { topicService } from '../../../../service/topics/topics.service';
 import { userService } from '../../../../service/user/user.service';
 import { getUserAverageScore } from '../../../../utils/getUserAverageScore';
 import { getAverageScore } from '../../../../utils/getAverageScore';
+import {userTest} from '../../../../service/userTest/userTest.service';
+import {ITest} from '../../../../types/question.types';
 
 const profileAnimation = {
   hidden: {
@@ -39,19 +41,21 @@ const ProfileStatistics = () => {
   const [averageUserScores, setAverageUserScores] = useState<IStatUser[]>([]);
   const [currentUser, setCurrentUser] = useState<IUser>();
   const [allTopics, setAllTopics] = useState<ITopic[]>([]);
+  const [allTest, setAllTest] = useState<ITest[]>([]);
   const { pathname } = useLocation();
   const { user } = useAuth();
 
   useEffect(() => {
     getCurrentUsers();
     getAllTopics();
+    getAllTests();
   }, []);
 
   useEffect(() => {
-    if (allTopics.length > 0 && currentUser) {
-      setAverageUserScores(getUserAverageScore(currentUser, allTopics));
+    if (allTopics.length > 0 && currentUser && allTest.length > 0) {
+      setAverageUserScores(getUserAverageScore(currentUser, allTopics, allTest));
     }
-  }, [currentUser, allTopics]);
+  }, [currentUser, allTopics, allTest]);
 
   const getCurrentUsers = async () => {
     if (user) {
@@ -63,6 +67,11 @@ const ProfileStatistics = () => {
   const getAllTopics = async () => {
     const { data: topicData } = await topicService.getAll();
     setAllTopics(topicData);
+  };
+
+  const getAllTests = async () => {
+    const { data: allTest } = await userTest.getAll();
+    setAllTest(allTest);
   };
 
   return (
@@ -117,7 +126,7 @@ const ProfileStatistics = () => {
         >
           Баллы за тесты
         </motion.h2>
-        <StatisticsTable data={averageUserScores} color="pink" percent={false} />
+        <StatisticsTable data={averageUserScores} color="pink" percent />
         <div className={styles.containerStats}>
           <motion.div
             className={styles.filledTests}
@@ -137,7 +146,7 @@ const ProfileStatistics = () => {
             viewport={{ amount: 0.2, once: true }}
           >
             <h2>Средний балл</h2>
-            <h3>{averageUserScores.length > 0 && getAverageScore(averageUserScores)}</h3>
+            <h3>{averageUserScores.length > 0 && getAverageScore(averageUserScores)} %</h3>
           </motion.div>
         </div>
       </div>

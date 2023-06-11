@@ -5,17 +5,23 @@ import styles from './QuestionItem.module.scss';
 interface QuestionItemProps {
   questionNumber: number;
   onClick: (questionNumber: number) => void;
+  active?: boolean;
+  choose?: boolean;
 }
 
-const QuestionItem:FC<QuestionItemProps> = ({ questionNumber, onClick }: QuestionItemProps) => (
-  <div
-    className={cn(styles.questionItem)}
-    onClick={() => onClick(questionNumber)}
-  >
-    <span className={styles.questionNumber}>
-      {questionNumber + 1}
-    </span>
-  </div>
-);
+const QuestionItem:FC<QuestionItemProps> = ({
+  questionNumber, onClick, active, choose,
+}: QuestionItemProps) => {
+  return (
+    <div
+      className={cn(styles.questionItem, { [styles.active]: active, [styles.choose]: choose && !active })}
+      onClick={() => onClick(questionNumber)}
+    >
+      <span className={styles.questionNumber}>
+        {questionNumber + 1}
+      </span>
+    </div>
+  );
+};
 
 export default QuestionItem;

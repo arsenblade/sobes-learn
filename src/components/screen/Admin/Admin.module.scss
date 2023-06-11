@@ -17,6 +17,7 @@
   .adminContent {
     width: 100%;
     border-top: 6px solid $darkGreyUnderline;
+    min-height: 90vh;
 
     @media (max-width: 650px) {
       width: 650px;
