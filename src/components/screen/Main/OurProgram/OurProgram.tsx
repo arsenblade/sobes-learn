@@ -63,47 +63,31 @@ const OurProgram = () => {
             <Accordion title="Разбор теоретических вопросы">
               <ul className={styles.list}>
                 <li className={styles.item}>
-                  Вопросы по
-                  <strong>HTML</strong>
+                  Вопросы по <strong>HTML</strong>
                 </li>
                 <li className={styles.item}>
-                  Вопросы по
-                  <strong>CSS</strong>
+                  Вопросы по <strong>CSS</strong>
                 </li>
                 <li className={styles.item}>
-                  Вопросы по
-                  <strong>JavaScript</strong>
-                  . Часть 1
+                  Вопросы по <strong>JavaScript</strong>. Часть 1
                 </li>
                 <li className={styles.item}>
-                  Вопросы по
-                  <strong>JavaScript</strong>
-                  . Часть 2
+                  Вопросы по <strong>JavaScript</strong>. Часть 2
                 </li>
                 <li className={styles.item}>
-                  Вопросы по
-                  <strong>JavaScript</strong>
-                  . Часть 3
+                  Вопросы по <strong>JavaScript</strong>. Часть 3
                 </li>
                 <li className={styles.item}>
-                  Вопросы по
-                  <strong>TypeScript</strong>
-                  . Часть 1
+                  Вопросы по <strong>TypeScript</strong>. Часть 1
                 </li>
                 <li className={styles.item}>
-                  Вопросы по
-                  <strong>TypeScript</strong>
-                  . Часть 2
+                  Вопросы по <strong>TypeScript</strong>. Часть 2
                 </li>
                 <li className={styles.item}>
-                  Вопросы по
-                  <strong>React</strong>
-                  . Часть 1
+                  Вопросы по <strong>React</strong>. Часть 1
                 </li>
                 <li className={styles.item}>
-                  Вопросы по
-                  <strong>React</strong>
-                  . Часть 2
+                  Вопросы по <strong>React</strong>. Часть 2
                 </li>
               </ul>
             </Accordion>

@@ -22,7 +22,7 @@ const QuestionMap:FC<QuestionMapProps> = ({allQuestions, onClick, currentQuestio
         {allQuestions.map((question, index) => (
           <QuestionItem
             questionNumber={index}
-            onClick={onClick}
+            onClick={question.idQuestion !== currentQuestion.idQuestion ? onClick : null}
             active={question.idQuestion === currentQuestion.idQuestion}
             choose={userAnswers.some((userAnswer) => userAnswer.idAnswers.length > 0 && userAnswer.idQuestion === question.idQuestion)}
             key={question.idQuestion}

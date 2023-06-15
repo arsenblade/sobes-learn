@@ -28,7 +28,7 @@ const TopicReact = () => {
   if (currentTopic) {
     try {
       imgUrl = require(`../../../../assets/img/${currentTopic.pictureTopicUrl}`);
-      videoUrl = require(`../../../../assets/videos/${currentTopic.videoUrl}`);
+      videoUrl = currentTopic.videoUrl;
     } catch (error) {
       MyToast('Не удалось загрузить лекцию', false);
     }
@@ -62,7 +62,6 @@ const TopicReact = () => {
       navigate(`/topics/react/${backTopic.id}`);
     }
   };
-  console.log(imgUrl);
 
   return (
     <div className={styles.topicReact}>

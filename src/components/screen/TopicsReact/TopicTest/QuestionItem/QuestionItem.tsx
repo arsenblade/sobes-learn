@@ -4,7 +4,7 @@ import styles from './QuestionItem.module.scss';
 
 interface QuestionItemProps {
   questionNumber: number;
-  onClick: (questionNumber: number) => void;
+  onClick: ((questionNumber: number) => void) | null;
   active?: boolean;
   choose?: boolean;
 }
@@ -15,7 +15,7 @@ const QuestionItem:FC<QuestionItemProps> = ({
   return (
     <div
       className={cn(styles.questionItem, { [styles.active]: active, [styles.choose]: choose && !active })}
-      onClick={() => onClick(questionNumber)}
+      onClick={() => onClick && onClick(questionNumber)}
     >
       <span className={styles.questionNumber}>
         {questionNumber + 1}

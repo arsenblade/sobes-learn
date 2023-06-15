@@ -1,4 +1,4 @@
-export const API_URL = 'http://localhost:8000';
+export const API_URL = 'https://sobes-learn-back.onrender.com';
 
 export const getLoginUrl = () => '/login';
 export const getRegisterUrl = () => '/users';

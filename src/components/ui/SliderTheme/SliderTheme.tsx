@@ -44,7 +44,7 @@ const SliderTheme:FC<SliderThemeProps> = ({ sliders }) => {
   // eslint-disable-next-line consistent-return
   const changeVideoUrl = (videoUrl: string) => {
     try {
-      return require(`../../../assets/videos/${videoUrl}`);
+      return videoUrl;
     } catch (error) {
       MyToast('Не удалось загрузить лекцию', false);
     }
@@ -85,22 +85,7 @@ const SliderTheme:FC<SliderThemeProps> = ({ sliders }) => {
         {sliders.map((slider, idx) => (
           <SwiperSlide key={slider.id}>
             <div className={styles.containerPoster}>
-              <img className={cn(styles.img, { [styles.displayNoneImg]: isPlayVideo === true && idx === activeIndex })} src={require('../../../assets/img/react-poster.png')} alt="Постер." />
-              {isPlayVideo === true && idx === activeIndex
-                  && (
-                  <motion.video
-                    className={styles.videos}
-                    transition={{ duration: 0.5 }}
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true }}
-                    variants={personalProjectAnimation}
-                    src={changeVideoUrl(slider.videoUrl)}
-                    autoPlay
-                    muted
-                    loop
-                  />
-                  )}
+              <img className={cn(styles.img)} src={require('../../../assets/img/react-poster.png')} alt="Постер." />
             </div>
             <h2 className={styles.title}>
               #
