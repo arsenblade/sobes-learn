@@ -52,9 +52,8 @@ const PaymentCourse = () => (
         viewport={{ amount: 0.2, once: true }}
         variants={contentAnimation}
       >
-        <h2 className={styles.price}>499</h2>
-        <span className={styles.clarification}>₽ в месяц</span>
-        <span className={styles.priceNoDiscount}>1999₽</span>
+        <h2 className={styles.price}>1999</h2>
+        <span className={styles.priceNoDiscount}>3999₽</span>
       </motion.div>
       <Button
         className={styles.btn}

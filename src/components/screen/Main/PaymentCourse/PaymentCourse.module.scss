@@ -35,6 +35,7 @@
         margin-bottom: 20px;
         margin-left: 50px;
         width: 540px;
+        user-select: none;
       }
 
       .clarification {
@@ -48,6 +49,7 @@
         font-weight: 900;
         top: 50px;
         left: 670px;
+        user-select: none;
 
         &::before {
           content: "";

@@ -28,6 +28,7 @@
 
     .title {
       margin: 0;
+      user-select: none;
     }
 
     .icon {
@@ -68,6 +69,7 @@
     border-radius: 10px;
     padding: 10px;
     margin-top: 30px;
+    user-select: none;
   }
 }
 
